@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className={"main"}>
       <section className={"main-section"}>
-        <div className="profile-image_wrapper">
+        <div className="profile-image_wrapper margin-bottom">
           <Image alt="armin-yahya" src={"/profile-image.jpg"} fill />
         </div>
         <div className="full-name">Armin Yahya</div>
@@ -55,7 +55,7 @@ export default function Home() {
       <section className={"main-section"}>
         <div className="header">Past experience</div>
         <div className="past-experience">
-          <div className="past-experience_item">
+          <div className="past-experience_item margin-bottom-2x">
             <div className="past-experience_item_icon_wrapper">
               <div className="past-experience_item_icon">
               <Image alt="likedin" src={"/chargoon.jpg"} fill />
@@ -63,7 +63,7 @@ export default function Home() {
             </div>
 						<div className="past-experience_item_detail">
             <div className="past-experience_item_detail_date">
-              Chargoon - 2020/Present
+              Chargoon - 2020 / Present
             </div>
             <div className="past-experience_item_detail_role">
               Frontend Developer
@@ -105,7 +105,7 @@ export default function Home() {
             </div>
 						<div className="past-experience_item_detail">
             <div className="past-experience_item_detail_date">
-              Chargoon - 2020/Present
+              Yeganeh Soft - 2018 / 2020
             </div>
             <div className="past-experience_item_detail_role">
               Frontend Developer
