@@ -1,9 +1,23 @@
+"use client"
 import Image from "next/image";
 import "./page.css";
+import { useState } from "react";
+import { darkThemeColors, lightThemeColors } from "./constant";
 
 export default function Home() {
+  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'); 
+  const switchTheme = () => {
+   const targetThemeVariables = currentTheme === 'light' ? darkThemeColors : lightThemeColors;
+   for(let variableName in targetThemeVariables) {
+    // @ts-ignore
+    document.documentElement.style.setProperty(variableName, targetThemeVariables[variableName]);
+   }
+   setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')
+  }
+
   return (
     <main className={"main"}>
+      <div onClick={switchTheme}>Switch Theme</div>
       <section className={"main-section"}>
         <div className="profile-image_wrapper margin-bottom">
           <Image alt="armin-yahya" src={"/profile-image.jpg"} fill />

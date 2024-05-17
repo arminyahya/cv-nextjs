@@ -1,3 +1,14 @@
 * {
 	font-family: "Open Sans", Helvetica, sans-serif;
 }
+
+:root {
+	--background-color: #fff;
+	--text-color: #000;
+	--text-color-lighter: rgb(77, 77, 77);
+}
+
+div {
+	color: var(--text-color);
+	line-height: 1.5;
+}
