@@ -4,7 +4,37 @@
 	--text-color-lighter: rgb(77, 77, 77);
 }
 
+* {
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+}
+
 div {
 	color: var(--text-color);
 	line-height: 1.5;
+}
+
+body {
+	margin: 0px auto;
+	max-width: 1000px;
+	padding: 50px 15px 25px 15px;
+	width: 100%;
+	background-color: var(--background-color);
+	animation: 2s fadeIn infinite;
+}
+
+.header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.header_item {
+	display: inline-block;
+	margin: 0px 5px;
+}
+
+.header_item svg {
+	vertical-align: middle;
 }
