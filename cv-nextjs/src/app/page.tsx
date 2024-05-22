@@ -3,12 +3,15 @@ import Image from "next/image";
 import "./page.css";
 import { useState } from "react";
 import { darkThemeColors, lightThemeColors } from "./constant";
+import LinkedinIcon from "@/Icons/linkedin-icon";
+import GmailIcon from "@/Icons/gmail-icon";
 
 export default function Home() {
   const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'); 
   const switchTheme = () => {
    const targetThemeVariables = currentTheme === 'light' ? darkThemeColors : lightThemeColors;
    for(let variableName in targetThemeVariables) {
+    console.log(targetThemeVariables)
     // @ts-ignore
     document.documentElement.style.setProperty(variableName, targetThemeVariables[variableName]);
    }
@@ -27,13 +30,13 @@ export default function Home() {
         <div className="contact-info">
           <div className="contact-info_item">
             <div className="contact-info_item_icon">
-              <Image alt="gmail" src={"/icons8-gmail.svg"} fill />
+              <GmailIcon />
             </div>
             <div className="contact-info_item_text">arminyahyaa@gmail.com</div>
           </div>
           <div className="contact-info_item">
             <div className="contact-info_item_icon">
-              <Image alt="likedin" src={"/icons8-linkedin.svg"} fill />
+              <LinkedinIcon />
             </div>
             <div className="contact-info_item_text">linkedin.com</div>
           </div>
