@@ -18,7 +18,7 @@
 
 .fade-in-animation {
   transition-timing-function: ease;
-	animation: 2s fadeIn forwards;
+	animation: 1s fadeIn forwards;
 }
 
 div {
@@ -48,4 +48,8 @@ body {
 
 .header_item svg {
 	vertical-align: middle;
+}
+
+ul {
+	margin: 0px;
 }

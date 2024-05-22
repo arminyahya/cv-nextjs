@@ -7,7 +7,7 @@ type AppContextType = {
 }
 
 const AppContext = createContext<AppContextType>({
-	language: 'fa'
+	language: 'en'
 })
 
 export default AppContext;

@@ -1,15 +1,16 @@
 "use client";
 import Image from "next/image";
 import "./page.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { darkThemeColors, lightThemeColors } from "./constant";
 import LinkedinIcon from "@/Icons/linkedin-icon";
 import GmailIcon from "@/Icons/gmail-icon";
-import AppContext from "@/appcontext";
 import useTranslation from "./_translation/useTranslation";
+import AppContext from "@/appContext";
 
 export default function Home() {
-  const { translate } = useTranslation();
+  const { translate, currentLanguage } = useTranslation();
+	const slideClassName = currentLanguage === 'en' ? 'slide-from-left' : 'slide-from-right';
   return (
     <main className={"main"}>
       <section className={"main-section"}>
@@ -32,14 +33,14 @@ export default function Home() {
             <div className="contact-info_item_text">linkedin.com</div>
           </div>
         </div>
-        <div className="header slide-from-left">{translate("about_me")}</div>
+        <div className={"header " + slideClassName}>{translate("about_me")}</div>
         <div
           className="topic-inner-text margin-bottom about-me"
           style={{ maxWidth: 400 }}
         >
           {translate("about_me_content")}
         </div>
-        <div className="header slide-from-left">{translate("skills")}</div>
+        <div className={"header " + slideClassName}>{translate("skills")}</div>
         <div className="topic-inner-text skills_inner">
 					<ul>
             <li className="skills_item">Javascript</li>
@@ -56,7 +57,7 @@ export default function Home() {
         </div>
       </section>
       <section className={"main-section "}>
-        <div className="header past-experience_header slide-from-left">{translate("past_experiences")}</div>
+        <div className={"header " + slideClassName}>{translate("past_experiences")}</div>
         <div className="past-experience fade-in-animation">
           <div className="past-experience_item margin-bottom-2x">
             <div className="past-experience_item_icon_wrapper">
@@ -67,7 +68,7 @@ export default function Home() {
             <div className="past-experience_item_detail">
               <div className="past-experience_item_detail_date">
                 {translate("chargoon")} - {translate("2020")} /{" "}
-                {translate("Present")}
+                {translate("Ppresent")}
               </div>
               <div className="past-experience_item_detail_role">
                 {translate("role")}
@@ -85,7 +86,7 @@ export default function Home() {
             </div>
             <div className="past-experience_item_detail">
               <div className="past-experience_item_detail_date">
-							{translate("Yeganeh Soft")} - {translate("2018")} / {translate("2020")}
+							{translate("yeganeh_soft")} - {translate("2018")} / {translate("2020")}
               </div>
               <div className="past-experience_item_detail_role">
                 {translate("role")}

@@ -11,7 +11,7 @@ type HeaderProps = {
 
 export default function Header({ setCurrentLang }: HeaderProps) {
 	
-	const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('dark'); 
+	const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'); 
 	const context = useContext(AppContext);
 	const {language} = context;
 

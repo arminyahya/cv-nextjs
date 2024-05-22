@@ -52,15 +52,15 @@
 	color: var(--text-color-lighter);
 	font-size: 12px;
 }
+
 @keyframes slideFromLeft {
   from { left: -100%; }
-  to { left: 0; }
+  to { left: 0px; }
 }
 
-.slide-from-left {
-	position: relative;
-	left: -100%;
-  animation: slideFromLeft 0.5s forwards;
+@keyframes slideFromRight {
+  from { right: -100%; }
+  to { right: 0px; }
 }
 
 .main .header {
@@ -68,13 +68,12 @@
 	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: 20px;
-
 }
 
 
 .about-me {
 	animation-delay: 0.25;
-	animation: fadeIn 2s forwards;
+	animation: fadeIn 1s forwards;
 }
 
 
@@ -102,41 +101,39 @@
 
 .skills_item {
 	opacity: 0;
-	animation: fadeIn 1s forwards;
+	animation: fadeIn 0.5s forwards;
 }
-.skills_item:nth-child(1) {
-	animation-delay: 2s;
+/* .skills_item:nth-child(1) {
+	animation-delay: 1s;
 }
 
 .skills_item:nth-child(2) {
-	animation-delay: 2.25s;
+	animation-delay: 1.25s;
 }
 
 .skills_item:nth-child(3) {
-	animation-delay: 2.5s;
+	animation-delay: 1.5s;
 }
 
 
 .skills_item:nth-child(4) {
-	animation-delay: 3s;
+	animation-delay: 1.75s;
 }
 
 .skills_item:nth-child(5) {
-	animation-delay: 3.25s;
+	animation-delay: 2s;
 }
 
 .skills_item:nth-child(6) {
-	animation-delay: 3.5s;
-}
+	animation-delay: 2.25s;
+} */
 
 .past-experience_header {
-	animation-delay: 4.5s;
 }
 
 .past-experience {
 	margin-bottom: 20px;
 	opacity: 0;
-	animation-delay: 4.5s;
 }
 .past-experience_item {
 	display: flex;
@@ -173,4 +170,24 @@
 	.main {
 		flex-direction: row;
 	}
+}
+
+.slide-from-right {
+	position: relative;
+	right: -100%;
+	left: unset;
+	opacity: 0;
+  animation: slideFromRight 0.5s forwards, 1s fadeIn forwards;
+}
+
+.slide-from-left {
+	position: relative;
+	opacity: 0;
+	left: -100%;
+  animation: slideFromLeft 0.5s forwards, 1s fadeIn forwards;
+}
+
+html[dir="rtl"] .contact-info_item_icon{
+	margin-right: 0px;
+	margin-left: 10px;
 }

@@ -10,6 +10,7 @@ export default function useTranslation() {
 		return dictionary[word];
 	}
 	return {
-		translate
+		translate,
+		currentLanguage: context.language
 	}
 }
