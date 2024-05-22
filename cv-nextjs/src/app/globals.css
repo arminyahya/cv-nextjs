@@ -4,15 +4,27 @@
 	--text-color-lighter: rgb(77, 77, 77);
 }
 
+@keyframes fadeIn {
+	from { opacity: 0; }
+		to { opacity: 1; }
+}
+
 * {
   transition-property: color, background-color, border-color;
   transition-duration: 0.25s;
+
+}
+
+
+.fade-in-animation {
   transition-timing-function: ease;
+	animation: 2s fadeIn forwards;
 }
 
 div {
 	color: var(--text-color);
 	line-height: 1.5;
+
 }
 
 body {
@@ -21,7 +33,6 @@ body {
 	padding: 50px 15px 25px 15px;
 	width: 100%;
 	background-color: var(--background-color);
-	animation: 2s fadeIn infinite;
 }
 
 .header {

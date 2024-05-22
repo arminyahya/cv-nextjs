@@ -32,30 +32,32 @@ export default function Home() {
             <div className="contact-info_item_text">linkedin.com</div>
           </div>
         </div>
-        <div className="header">{translate("about_me")}</div>
+        <div className="header slide-from-left">{translate("about_me")}</div>
         <div
-          className="topic-inner-text margin-bottom"
+          className="topic-inner-text margin-bottom about-me"
           style={{ maxWidth: 400 }}
         >
           {translate("about_me_content")}
         </div>
-        <div className="header">{translate("skills")}</div>
+        <div className="header slide-from-left">{translate("skills")}</div>
         <div className="topic-inner-text skills_inner">
-          <ul>
-            <li>Javascript</li>
-            <li>Reactjs</li>
-            <li>Css</li>
-          </ul>
-          <ul>
-            <li>ReduxToolkit</li>
-            <li>Nextjs</li>
-            <li>Webpack</li>
-          </ul>
+					<ul>
+            <li className="skills_item">Javascript</li>
+            <li className="skills_item">Reactjs</li>
+            <li className="skills_item">Css</li>
+						</ul>
+					<ul>
+
+            <li className="skills_item">ReduxToolkit</li>
+            <li className="skills_item">Nextjs</li>
+            <li className="skills_item">Webpack</li>
+						</ul>
+
         </div>
       </section>
-      <section className={"main-section"}>
-        <div className="header">{translate("past_experiences")}</div>
-        <div className="past-experience">
+      <section className={"main-section "}>
+        <div className="header past-experience_header slide-from-left">{translate("past_experiences")}</div>
+        <div className="past-experience fade-in-animation">
           <div className="past-experience_item margin-bottom-2x">
             <div className="past-experience_item_icon_wrapper">
               <div className="past-experience_item_icon">

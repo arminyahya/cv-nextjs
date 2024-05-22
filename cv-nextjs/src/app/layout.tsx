@@ -7,6 +7,7 @@ import AppContext from "@/appcontext";
 import { useState } from "react";
 
 const openSans = localFont({ src: "../../public/OpenSans.ttf" });
+const iranYekan = localFont({ src: "../../public/Iranyekan light.ttf" });
 
 export default function RootLayout({
   children,
@@ -15,8 +16,8 @@ export default function RootLayout({
 }>) {
 	const [currentLang, setCurrentLang] = useState<"en" | 'fa'>("en")
   return (
-    <html lang="en">
-      <body className={openSans.className}>
+    <html dir={currentLang === 'en' ? 'ltr' : 'rtl'} lang={currentLang}>
+      <body className={(currentLang === 'en'? openSans.className :iranYekan.className)}>
         <AppContext.Provider value={{ language: currentLang }}>
           <Header setCurrentLang={setCurrentLang} />
           {children}

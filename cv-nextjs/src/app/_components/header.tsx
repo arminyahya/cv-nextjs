@@ -11,7 +11,7 @@ type HeaderProps = {
 
 export default function Header({ setCurrentLang }: HeaderProps) {
 	
-	const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'); 
+	const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('dark'); 
 	const context = useContext(AppContext);
 	const {language} = context;
 
@@ -24,12 +24,19 @@ export default function Header({ setCurrentLang }: HeaderProps) {
    setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')
   }
 
+	const switchLang = () => {
+		setCurrentLang(language === 'en' ? 'fa' : 'en');
+		const body = document.querySelector('body');
+		body?.classList.remove('fade-in-animation');
+		body?.classList.add('fade-in-animation');
+	}
+
 	return (
 		<div className="header">
 			<div className="header_item" onClick={switchTheme}>
 				{currentTheme === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
 			</div>
-			<div className="header_item" onClick={() => setCurrentLang(language === 'en' ? 'fa' : 'en')}>
+			<div className="header_item" onClick={switchLang} >
 				{language === 'en' ? 'Farsi' : 'English'}
 			</div>
 		</div>
