@@ -14,7 +14,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-	const [currentLang, setCurrentLang] = useState<"en" | 'fa'>("en");
+	const [currentLang, setCurrentLang] = useState<"en" | 'fa'>("fa");
   return (
     <html dir={currentLang === 'en' ? 'ltr' : 'rtl'} lang={currentLang}>
       <body className={(currentLang === 'en'? openSans.className :iranYekan.className)}>

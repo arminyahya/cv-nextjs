@@ -187,6 +187,73 @@
   animation: slideFromLeft 0.5s forwards, 1s fadeIn forwards;
 }
 
+.gallery-button {
+	display: inline-block;
+	color: var(--text-color);
+	text-decoration: underline;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background: #aaa;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: auto;
+}
+
+.prev-button, .next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 1.5em;
+}
+
+.prev-button {
+  left: 0;
+}
+
+.next-button {
+  right: 0;
+}
+
 html[dir="rtl"] .contact-info_item_icon{
 	margin-right: 0px;
 	margin-left: 10px;

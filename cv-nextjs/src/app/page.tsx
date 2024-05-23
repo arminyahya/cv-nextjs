@@ -7,6 +7,7 @@ import LinkedinIcon from "@/Icons/linkedin-icon";
 import GmailIcon from "@/Icons/gmail-icon";
 import useTranslation from "./_translation/useTranslation";
 import AppContext from "@/appContext";
+import GalleryButton from "./_components/galleryButton";
 
 export default function Home() {
   const { translate, currentLanguage } = useTranslation();
@@ -68,13 +69,14 @@ export default function Home() {
             <div className="past-experience_item_detail">
               <div className="past-experience_item_detail_date">
                 {translate("chargoon")} - {translate("2020")} /{" "}
-                {translate("Ppresent")}
+                {translate("present")}
               </div>
               <div className="past-experience_item_detail_role">
                 {translate("role")}
               </div>
               <div className="past-experience_item_detail_activity">
                 {translate("chargoon_work_description")}
+								<GalleryButton images={[]} />
               </div>
             </div>
           </div>
@@ -93,6 +95,8 @@ export default function Home() {
               </div>
               <div className="past-experience_item_detail_activity">
 							{translate("yeganeh_soft_description")}
+							<GalleryButton images={[]}/>
+
               </div>
             </div>
           </div>
