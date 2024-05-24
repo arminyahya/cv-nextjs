@@ -5,14 +5,19 @@
 
 .main-section {
 	flex: 1;
+	margin-bottom: 20px;
 }
 
 .profile-image_wrapper {
 	position: relative;
-	width: 260px;
+	width: 100%;
 	height: 260px;
 }
 
+.profile-image_wrapper .slide-image {
+	transition: transform 0.2s ease-out;
+
+}
 .full-name {
 	font-size: 20px;
 	font-weight: bold;
@@ -170,6 +175,11 @@
 	.main {
 		flex-direction: row;
 	}
+
+	.profile-image_wrapper {
+		width: 260px !important;
+	}
+
 }
 
 .slide-from-right {
@@ -269,6 +279,10 @@ html[dir="rtl"] .contact-info_item_icon{
 	margin-left: 10px;
 }
 
+
+html[dir="rtl"] .past-experience_item_icon_wrapper {
+	margin-left: 10px;
+}
 .ReactModal__Body--open {
 	overflow: hidden;
 }

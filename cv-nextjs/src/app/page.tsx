@@ -18,7 +18,7 @@ export default function Home() {
     <main className={"main"}>
       <section className={"main-section"}>
         <div className="profile-image_wrapper margin-bottom">
-          <Image alt="armin-yahya" src={"/profile-image.jpg"} fill />
+          <Image alt="armin-yahya" src={"/profile-image.jpg"} fill objectPosition="50% 50%" objectFit="cover" />
         </div>
         <div className="full-name">{translate("fullname")}</div>
         <div className="role">{translate("role")}</div>
