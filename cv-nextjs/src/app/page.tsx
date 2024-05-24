@@ -8,6 +8,8 @@ import GmailIcon from "@/Icons/gmail-icon";
 import useTranslation from "./_translation/useTranslation";
 import AppContext from "@/appContext";
 import GalleryButton from "./_components/galleryButton";
+import YeganehIcon from "@/Icons/yeganeh";
+import ChargoonIcon from "@/Icons/chargoon";
 
 export default function Home() {
   const { translate, currentLanguage } = useTranslation();
@@ -63,7 +65,7 @@ export default function Home() {
           <div className="past-experience_item margin-bottom-2x">
             <div className="past-experience_item_icon_wrapper">
               <div className="past-experience_item_icon">
-                <Image alt="likedin" src={"/chargoon.jpg"} fill />
+								<ChargoonIcon />
               </div>
             </div>
             <div className="past-experience_item_detail">
@@ -76,14 +78,21 @@ export default function Home() {
               </div>
               <div className="past-experience_item_detail_activity">
                 {translate("chargoon_work_description")}
-								<GalleryButton images={[]} />
+								<GalleryButton images={[
+								'/chargoon-1.jpg',
+								'/chargoon-2.jpg',
+								'/chargoon-3.jpg',
+								'/chargoon-4.jpg',
+								'/chargoon-5.jpg',
+								'/chargoon-6.jpg',
+							]}/>
               </div>
             </div>
           </div>
           <div className="past-experience_item">
             <div className="past-experience_item_icon_wrapper">
               <div className="past-experience_item_icon">
-                <Image alt="likedin" src={"/yeganeh.jpg"} fill />
+                <YeganehIcon />
               </div>
             </div>
             <div className="past-experience_item_detail">
@@ -95,7 +104,14 @@ export default function Home() {
               </div>
               <div className="past-experience_item_detail_activity">
 							{translate("yeganeh_soft_description")}
-							<GalleryButton images={[]}/>
+							<GalleryButton images={[
+								'/yeganeh-1.jpg',
+								'/yeganeh-2.jpg',
+								'/yeganeh-3.jpg',
+								'/yeganeh-4.jpg',
+								'/yeganeh-5.jpg',
+								'/yeganeh-6.jpg',
+							]}/>
 
               </div>
             </div>

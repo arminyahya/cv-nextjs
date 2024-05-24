@@ -2,14 +2,18 @@
 import React, { useState } from "react";
 import Modal from "./modal";
 import SlideShow from "./slideShow";
+import useTranslation from "../_translation/useTranslation";
 
 export default function GalleryButton({ images }: { images: string[] }) {
+	const { translate } = useTranslation();
   const [isModalOpen, setModalOpen] = useState(false);
+
   return (
     <div className="gallery-button">
       <Modal
         isOpen={isModalOpen}
         onClose={() => {
+					document.querySelector('body')?.classList.remove('ReactModal__Body--open');
           setModalOpen(false);
         }}
       >
@@ -19,10 +23,12 @@ export default function GalleryButton({ images }: { images: string[] }) {
       </Modal>
       <span
         onClick={() => {
+					document.querySelector('html').scrollTop = 0;
+					document.querySelector('body')?.classList.add('ReactModal__Body--open');
           setModalOpen(true);
         }}
       >
-        See gallery
+        {translate('see_gallery')}
       </span>
     </div>
   );

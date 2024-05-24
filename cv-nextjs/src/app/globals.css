@@ -28,6 +28,7 @@ div {
 }
 
 body {
+	position: relative;
 	margin: 0px auto;
 	max-width: 1000px;
 	padding: 50px 15px 25px 15px;

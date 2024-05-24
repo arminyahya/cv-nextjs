@@ -14,7 +14,7 @@ const EN_Dictionary: dictionary = {
 	yeganeh_soft: 'Yeganeh Soft',
 	'2018': '2018',
 	yeganeh_soft_description: `Yeganeh Company was my first work experience where we developed web-based software for correspondence and document management. Our front-end stack was React and Typescript, and it was my first time getting familiar with Typescript there. We used Trello for task management. We developed our pages using the AntDesign framework. Some of our pages did not have ready-made components, so we developed them ourselves. It was my first time in the Yeganeh team getting acquainted with the concept of UX, and we interacted with the UX expert to ensure that the page implementation was in line with better user experience.`,
-
+	see_gallery: 'See gallery'
 };
 
 export default EN_Dictionary;

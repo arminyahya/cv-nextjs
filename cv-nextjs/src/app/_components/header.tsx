@@ -4,6 +4,7 @@ import LightModeIcon from "@/Icons/light-mode";
 import react, { useContext, useState } from "react";
 import { darkThemeColors, lightThemeColors } from "../constant";
 import AppContext from "@/appcontext";
+import MultiLangIcon from "@/Icons/multi-lang";
 
 type HeaderProps = {
 	setCurrentLang: (lang: "fa" | "en") => void;
@@ -37,7 +38,7 @@ export default function Header({ setCurrentLang }: HeaderProps) {
 				{currentTheme === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
 			</div>
 			<div className="header_item" onClick={switchLang} >
-				{language === 'en' ? 'Farsi' : 'English'}
+				<MultiLangIcon />
 			</div>
 		</div>
 	)
