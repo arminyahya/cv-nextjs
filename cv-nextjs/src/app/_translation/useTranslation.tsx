@@ -6,9 +6,15 @@ import EN_Dictionary from "./en";
 export default function useTranslation() {
 	const context = useContext(AppContext);
 	const translate = (word: string) => {
+		let result;
 		const dictionary = context.language === 'fa' ? FA_Dictionary : EN_Dictionary;
-		return dictionary[word];
+		result = dictionary[word];
+		if(!result) {
+			return word;
+		}
+		return result;
 	}
+	
 	return {
 		translate,
 		currentLanguage: context.language

@@ -10,33 +10,35 @@ import AppContext from "@/appContext";
 import GalleryButton from "./_components/galleryButton";
 import YeganehIcon from "@/Icons/yeganeh";
 import ChargoonIcon from "@/Icons/chargoon";
+import PersonalInfoItem from "./_components/PersonalInfoItem";
 
 export default function Home() {
   const { translate, currentLanguage } = useTranslation();
-	const slideClassName = currentLanguage === 'en' ? 'slide-from-left' : 'slide-from-right';
+  const slideClassName =
+    currentLanguage === "en" ? "slide-from-left" : "slide-from-right";
   return (
     <main className={"main"}>
       <section className={"main-section"}>
         <div className="profile-image_wrapper margin-bottom">
-          <Image alt="armin-yahya" src={"/profile-image.jpg"} fill objectPosition="50% 50%" objectFit="cover" />
+          <Image
+            alt="armin-yahya"
+            src={"/profile-image.jpg"}
+            fill
+            objectPosition="50% 50%"
+            objectFit="cover"
+          />
         </div>
         <div className="full-name">{translate("fullname")}</div>
         <div className="role">{translate("role")}</div>
-        <div className="contact-info">
-          <div className="contact-info_item">
-            <div className="contact-info_item_icon">
-              <GmailIcon />
-            </div>
-            <div className="contact-info_item_text">arminyahyaa@gmail.com</div>
-          </div>
-          <div className="contact-info_item">
-            <div className="contact-info_item_icon">
-              <LinkedinIcon />
-            </div>
-            <div className="contact-info_item_text">linkedin.com</div>
-          </div>
+        <div className="personal-info">
+					<PersonalInfoItem label={translate("birthDate")} value={translate("birthDateValue")} />
+					<PersonalInfoItem label={translate("location")} value={translate("tehran")}/>
+					<PersonalInfoItem label={translate("militaryService")} value={translate("finished")}/>
+         
         </div>
-        <div className={"header " + slideClassName}>{translate("about_me")}</div>
+        <div className={"header " + slideClassName}>
+          {translate("about_me")}
+        </div>
         <div
           className="topic-inner-text margin-bottom about-me"
           style={{ maxWidth: 400 }}
@@ -45,27 +47,27 @@ export default function Home() {
         </div>
         <div className={"header " + slideClassName}>{translate("skills")}</div>
         <div className="topic-inner-text skills_inner">
-					<ul>
+          <ul>
             <li className="skills_item">Javascript</li>
             <li className="skills_item">Reactjs</li>
             <li className="skills_item">Css</li>
-						</ul>
-					<ul>
-
+          </ul>
+          <ul>
             <li className="skills_item">ReduxToolkit</li>
             <li className="skills_item">Nextjs</li>
             <li className="skills_item">Webpack</li>
-						</ul>
-
+          </ul>
         </div>
       </section>
       <section className={"main-section "}>
-        <div className={"header " + slideClassName}>{translate("past_experiences")}</div>
+        <div className={"header " + slideClassName}>
+          {translate("past_experiences")}
+        </div>
         <div className="past-experience fade-in-animation">
           <div className="past-experience_item margin-bottom-2x">
             <div className="past-experience_item_icon_wrapper">
               <div className="past-experience_item_icon">
-								<ChargoonIcon />
+                <ChargoonIcon />
               </div>
             </div>
             <div className="past-experience_item_detail">
@@ -78,14 +80,16 @@ export default function Home() {
               </div>
               <div className="past-experience_item_detail_activity">
                 {translate("chargoon_work_description")}
-								<GalleryButton images={[
-								'/chargoon-1.jpg',
-								'/chargoon-2.jpg',
-								'/chargoon-3.jpg',
-								'/chargoon-4.jpg',
-								'/chargoon-5.jpg',
-								'/chargoon-6.jpg',
-							]}/>
+                <GalleryButton
+                  images={[
+                    "/chargoon-1.jpg",
+                    "/chargoon-2.jpg",
+                    "/chargoon-3.jpg",
+                    "/chargoon-4.jpg",
+                    "/chargoon-5.jpg",
+                    "/chargoon-6.jpg",
+                  ]}
+                />
               </div>
             </div>
           </div>
@@ -97,22 +101,24 @@ export default function Home() {
             </div>
             <div className="past-experience_item_detail">
               <div className="past-experience_item_detail_date">
-							{translate("yeganeh_soft")} - {translate("2018")} / {translate("2020")}
+                {translate("yeganeh_soft")} - {translate("2018")} /{" "}
+                {translate("2020")}
               </div>
               <div className="past-experience_item_detail_role">
                 {translate("role")}
               </div>
               <div className="past-experience_item_detail_activity">
-							{translate("yeganeh_soft_description")}
-							<GalleryButton images={[
-								'/yeganeh-1.jpg',
-								'/yeganeh-2.jpg',
-								'/yeganeh-3.jpg',
-								'/yeganeh-4.jpg',
-								'/yeganeh-5.jpg',
-								'/yeganeh-6.jpg',
-							]}/>
-
+                {translate("yeganeh_soft_description")}
+                <GalleryButton
+                  images={[
+                    "/yeganeh-1.jpg",
+                    "/yeganeh-2.jpg",
+                    "/yeganeh-3.jpg",
+                    "/yeganeh-4.jpg",
+                    "/yeganeh-5.jpg",
+                    "/yeganeh-6.jpg",
+                  ]}
+                />
               </div>
             </div>
           </div>
