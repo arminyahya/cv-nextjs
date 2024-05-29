@@ -4,7 +4,7 @@ const EN_Dictionary: dictionary = {
 	fullname: 'Armin Yahya',
 	role: 'Frontend Developer',
 	about_me: 'About me',
-	about_me_content: `I started programming with Front End. I was lucky to be able to work with experienced people from the beginning and learn from them. I love most sports and try to exercise a part of my time every week. The books I read are mostly in the field of self-help 🙂`,
+	about_me_content: `I began my programming journey with Front End development. I consider myself fortunate to have had the opportunity to collaborate with seasoned professionals from the outset and gain valuable insights from them. In addition to my passion for coding, I have a strong affinity for sports and dedicate time each week to physical exercise. The books I read are mostly in the field of Personal Development 🙂`,
 	skills: 'Skills',
 	past_experiences: 'Past experience',
 	chargoon: 'Chargoon',
