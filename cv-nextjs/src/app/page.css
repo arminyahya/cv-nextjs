@@ -11,7 +11,7 @@
 .profile-image_wrapper {
 	position: relative;
 	width: 100%;
-	height: 260px;
+	height: 220px;
 }
 
 .profile-image_wrapper .slide-image {
@@ -19,12 +19,12 @@
 
 }
 .full-name {
-	font-size: 20px;
+	font-size: 24px;
 	font-weight: bold;
 }
 
 .role {
-	font-size: 16px;
+	font-size: 20px;
 	margin-bottom: 20px;
 }
 
@@ -33,10 +33,13 @@
 	margin-bottom: 24px;
 }
 
+.personal-info_item {
+	margin-bottom: 10px;
+}
+
 .personal-info_item_label {
 	display: inline-block;
-	font-size: 16px;
-	color: var(--text-color-lighter);
+	font-size: 14px;
 	font-weight: bold;
 	margin-right: 8px;
 }
@@ -44,7 +47,6 @@
 .personal-info_item_value {
 	display: inline-block;
 	font-size: 16px;
-	color: var(--text-color-lighter);
 }
 
 .contact-info {
@@ -196,24 +198,22 @@
 	}
 
 	.profile-image_wrapper {
-		width: 260px !important;
+		width: 220px !important;
 	}
 
 }
 
 .slide-from-right {
 	position: relative;
-	right: -100%;
 	left: unset;
 	opacity: 0;
-  animation: slideFromRight 0.5s forwards, 1s fadeIn forwards;
+  animation: 1s fadeIn forwards;
 }
 
 .slide-from-left {
 	position: relative;
 	opacity: 0;
-	left: -100%;
-  animation: slideFromLeft 0.5s forwards, 1s fadeIn forwards;
+  animation: 1s fadeIn forwards;
 }
 
 .gallery-button {
@@ -242,19 +242,27 @@
 }
 
 .close-button {
-	position: absolute;
-	top: 0px;
-	right: 0px;
 	opacity: 0.7;
-	margin-top: 20px;
-	margin-right: 20px;
-}
-
-.close-button:hover {
-	opacity: 1;
 }
 
 .slideshow-container {
+}
+
+.slideshow-image-toolbar {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+.slideshow-image-toolbar_item {
+	display: inline-block;
+	padding: 20px 6px;
+	opacity: 0.7;
+}
+
+.slideshow-image-toolbar_item:hover {
+	opacity: 1;
+
 }
 
 .slideshow-image-container {

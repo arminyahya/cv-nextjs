@@ -9,7 +9,8 @@ export default function MultiLangIcon() {
       stroke="currentColor"
       aria-hidden="true"
       data-slot="icon"
-      height="20"
+      height="28"
+			width="28"
     >
       <path
         stroke-linecap="round"

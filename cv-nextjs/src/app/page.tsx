@@ -34,7 +34,7 @@ export default function Home() {
 					<PersonalInfoItem label={translate("birthDate")} value={translate("birthDateValue")} />
 					<PersonalInfoItem label={translate("location")} value={translate("tehran")}/>
 					<PersonalInfoItem label={translate("militaryService")} value={translate("finished")}/>
-         
+					<PersonalInfoItem label={translate("email")} value={'arminyahyaa@gmail.com'}/>
         </div>
         <div className={"header " + slideClassName}>
           {translate("about_me")}

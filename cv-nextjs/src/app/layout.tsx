@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "./_components/header";
 import AppContext from "@/appcontext";
 import { useState } from "react";
+import Footer from "./_components/footer";
 
 const openSans = localFont({ src: "../../public/OpenSans.ttf" });
 const iranYekan = localFont({ src: "../../public/Iranyekan light.ttf" });
@@ -25,6 +26,7 @@ export default function RootLayout({
         <AppContext.Provider value={{ language: currentLang }}>
           <Header setCurrentLang={setCurrentLang} />
           {children}
+					<Footer />
         </AppContext.Provider>
         <div id="portal-modal"></div>
       </body>

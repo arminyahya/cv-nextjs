@@ -6,8 +6,7 @@ const Modal = ({ isOpen, onClose, children }: any) => {
   return isOpen ? ReactDOM.createPortal(
     <div className="modal-overlay">
       <div className="modal-content">
-        <div onClick={onClose} className='close-button'><CloseIcon /></div>
-        {children}
+        {React.cloneElement(children, {onClose})}
       </div>
     </div>
   , document.querySelector('#portal-modal') as Element) : null;

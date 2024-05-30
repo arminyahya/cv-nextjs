@@ -20,7 +20,8 @@ const EN_Dictionary: dictionary = {
 	militaryService: 'MilitaryService',
 	birthDateValue: '1998-9-4',
 	tehran: 'Tehran',
-	finished: 'Finished'
+	finished: 'Finished',
+	email: 'Email'
 };
 
 export default EN_Dictionary;

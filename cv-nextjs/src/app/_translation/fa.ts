@@ -20,8 +20,9 @@ const FA_Dictionary: dictionary = {
 	location: 'آدرس',
 	militaryService: 'سربازی',
 	birthDateValue: '۱۳۷۷/۶/۱۳',
-	Tehran: 'تهران',
-	Finished: 'پایان یافته'
+	tehran: 'تهران',
+	finished: 'پایان یافته',
+	email: 'ایمیل'
 };
 
 export default FA_Dictionary;
