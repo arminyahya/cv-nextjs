@@ -31,10 +31,22 @@ export default function Home() {
         <div className="full-name">{translate("fullname")}</div>
         <div className="role">{translate("role")}</div>
         <div className="personal-info">
-					<PersonalInfoItem label={translate("birthDate")} value={translate("birthDateValue")} />
-					<PersonalInfoItem label={translate("location")} value={translate("tehran")}/>
-					<PersonalInfoItem label={translate("militaryService")} value={translate("finished")}/>
-					<PersonalInfoItem label={translate("email")} value={'arminyahyaa@gmail.com'}/>
+          <PersonalInfoItem
+            label={translate("birthDate")}
+            value={translate("birthDateValue")}
+          />
+          <PersonalInfoItem
+            label={translate("location")}
+            value={translate("tehran")}
+          />
+          <PersonalInfoItem
+            label={translate("militaryService")}
+            value={translate("finished")}
+          />
+          <PersonalInfoItem
+            label={translate("email")}
+            value={"arminyahyaa@gmail.com"}
+          />
         </div>
         <div className={"header " + slideClassName}>
           {translate("about_me")}
@@ -49,13 +61,21 @@ export default function Home() {
         <div className="topic-inner-text skills_inner">
           <ul>
             <li className="skills_item">Javascript</li>
+            <li className="skills_item">Typescript</li>
             <li className="skills_item">Reactjs</li>
-            <li className="skills_item">Css</li>
+            <li className="skills_item">HTML / CSS</li>
           </ul>
           <ul>
             <li className="skills_item">ReduxToolkit</li>
-            <li className="skills_item">Nextjs</li>
+            <li className="skills_item">Next.js</li>
             <li className="skills_item">Webpack</li>
+            <li className="skills_item">Git</li>
+          </ul>
+          <ul>
+            <li className="skills_item">Sass</li>
+            <li className="skills_item">NodeJS</li>
+            <li className="skills_item">Scrum</li>
+            <li className="skills_item">Software Development</li>
           </ul>
         </div>
       </section>
