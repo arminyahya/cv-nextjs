@@ -11,6 +11,7 @@ import GalleryButton from "./_components/galleryButton";
 import YeganehIcon from "@/Icons/yeganeh";
 import ChargoonIcon from "@/Icons/chargoon";
 import PersonalInfoItem from "./_components/personalInfoItem";
+import { prefix } from "./utils";
 
 export default function Home() {
   const { translate, currentLanguage } = useTranslation();
@@ -22,7 +23,7 @@ export default function Home() {
         <div className="profile-image_wrapper margin-bottom">
           <Image
             alt="armin-yahya"
-            src={"/profile-image.jpg"}
+            src={`${prefix}/profile-image.jpg`}
             fill
             objectPosition="50% 50%"
             objectFit="cover"
