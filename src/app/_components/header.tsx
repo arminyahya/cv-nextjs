@@ -3,7 +3,7 @@ import DarkModeIcon from "@/Icons/dark-mode";
 import LightModeIcon from "@/Icons/light-mode";
 import react, { useContext, useState } from "react";
 import { darkThemeColors, lightThemeColors } from "../constant";
-import AppContext from "@/appcontext";
+import AppContext from "../../appContext";
 import MultiLangIcon from "@/Icons/multi-lang";
 
 type HeaderProps = {

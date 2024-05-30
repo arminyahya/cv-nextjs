@@ -1,4 +1,4 @@
-import AppContext from "@/appcontext";
+import AppContext from "../../appContext";
 import { useContext } from "react";
 import FA_Dictionary from "./fa";
 import EN_Dictionary from "./en";

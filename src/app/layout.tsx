@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 import Header from "./_components/header";
-import AppContext from "@/appcontext";
+import AppContext from "@/appContext";
 import { useState } from "react";
 import Footer from "./_components/footer";
 

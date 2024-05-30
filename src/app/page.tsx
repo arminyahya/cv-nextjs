@@ -10,7 +10,7 @@ import AppContext from "@/appContext";
 import GalleryButton from "./_components/galleryButton";
 import YeganehIcon from "@/Icons/yeganeh";
 import ChargoonIcon from "@/Icons/chargoon";
-import PersonalInfoItem from "./_components/PersonalInfoItem";
+import PersonalInfoItem from "./_components/personalInfoItem";
 
 export default function Home() {
   const { translate, currentLanguage } = useTranslation();

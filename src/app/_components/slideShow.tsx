@@ -33,16 +33,16 @@ const SlideShow = ({ images, onClose }: any) => {
     setZoomLevel((zoom) => zoom - 0.1);
   };
 
-  const handleImageMoveStart = (e) => {
+  const handleImageMoveStart = (e: any) => {
     setIsDragging(true);
     prevMousePosition.current = { x: e.clientX, y: e.clientY };
   };
 
-  const handleImageMoveEnd = (e) => {
+  const handleImageMoveEnd = (e: any) => {
     setIsDragging(false);
   };
 
-  const handleImageMove = (e) => {
+  const handleImageMove = (e: any) => {
     if (isDragging) {
       console.log(isDragging);
       const { x, y } = position;
@@ -53,7 +53,7 @@ const SlideShow = ({ images, onClose }: any) => {
     }
   };
 
-  const handleZoom = (delta) => {
+  const handleZoom = (delta: any) => {
     setZoomLevel((prev) => {
       const newZoom = prev + delta;
       if (newZoom >= 1) {
@@ -63,7 +63,7 @@ const SlideShow = ({ images, onClose }: any) => {
     });
   };
 
-  const handleTouchMove = (e) => {
+  const handleTouchMove = (e: any) => {
     if (e.touches.length === 2) {
       const touch1 = e.touches[0];
       const touch2 = e.touches[1];
@@ -76,7 +76,7 @@ const SlideShow = ({ images, onClose }: any) => {
     }
   };
 
-  const handleImageWheel = (e) => {
+  const handleImageWheel = (e: any) => {
     const delta = e.deltaY > 0 ? -0.1 : 0.1;
     handleZoom(delta);
   };
