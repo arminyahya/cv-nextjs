@@ -119,6 +119,7 @@
 
 .skills_inner {
 	display: flex;
+	flex-direction: column;
 }
 
 .li {
@@ -200,7 +201,9 @@
 	.profile-image_wrapper {
 		width: 220px !important;
 	}
-
+	.skills_inner {
+		flex-direction: row;
+	}
 }
 
 .slide-from-right {
