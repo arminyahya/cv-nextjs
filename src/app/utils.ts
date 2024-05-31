@@ -1,2 +1,2 @@
-const prefix = process.env.BASE_PATH || "";
-export { prefix };
+const basePath = process.env.BASE_PATH || "";
+export { basePath };
