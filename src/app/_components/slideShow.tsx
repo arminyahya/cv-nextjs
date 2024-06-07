@@ -6,7 +6,7 @@ import RightArrow from "@/Icons/right-arrow";
 import ZoomInIcon from "@/Icons/zoom-in";
 import ZoomOutIcon from "@/Icons/zoom-out";
 import CloseIcon from "@/Icons/close";
-import { basePath } from "../utils";
+import { basePath } from "../constant";
 
 const SlideShow = ({ images, onClose }: any) => {
   const { currentLanguage } = useTranslation();

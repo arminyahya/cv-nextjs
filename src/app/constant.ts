@@ -9,3 +9,5 @@ export const lightThemeColors =  {
     '--text-color': '#000',
     '--text-color-lighter': 'rgb(77, 77, 77)'
 }
+
+export const basePath = process.env.NODE_ENV == 'production' ? "/cv-nextjs" : '';
