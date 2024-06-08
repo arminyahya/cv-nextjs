@@ -18,6 +18,7 @@ export default function RootLayout({
   const [currentLang, setCurrentLang] = useState<"en" | "fa">("fa");
   return (
     <html dir={currentLang === "en" ? "ltr" : "rtl"} lang={currentLang}>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <body
         className={
           currentLang === "en" ? openSans.className : iranYekan.className
