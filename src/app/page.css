@@ -321,3 +321,32 @@ html[dir="rtl"] .personal-info_item_label {
 	margin-left: 8px;
 
 }
+
+.small-horizontal-line {
+	display: inline-block;
+	width: 16px;
+	height: 1px;
+	margin: 0px 5px;
+	border-top: 1px solid var(--text-color-lighter);
+	vertical-align: middle;
+	opacity: 0.5;
+}
+
+@media print {
+	.main {
+		flex-direction: row;
+	}
+  .gallery-button, .header  {
+    display: none;
+  }
+
+	.profile-image_wrapper {
+		width: 220px;
+		max-width: 220px;
+	}
+
+	.skills_inner {
+		flex-direction: row;
+	}
+}
+

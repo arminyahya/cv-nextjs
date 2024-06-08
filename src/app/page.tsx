@@ -93,7 +93,7 @@ export default function Home() {
             </div>
             <div className="past-experience_item_detail">
               <div className="past-experience_item_detail_date">
-                {translate("chargoon")} - {translate("2020")} /{" "}
+                {translate("chargoon")}<div className="small-horizontal-line"></div>{translate("2020")} / {" "}
                 {translate("present")}
               </div>
               <div className="past-experience_item_detail_role">
@@ -122,7 +122,7 @@ export default function Home() {
             </div>
             <div className="past-experience_item_detail">
               <div className="past-experience_item_detail_date">
-                {translate("yeganeh_soft")} - {translate("2018")} /{" "}
+                {translate("yeganeh_soft")}<div className="small-horizontal-line"></div>{translate("2018")} /{" "}
                 {translate("2020")}
               </div>
               <div className="past-experience_item_detail_role">
