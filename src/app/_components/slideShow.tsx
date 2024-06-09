@@ -110,7 +110,7 @@ const SlideShow = ({ images, onClose }: any) => {
           onMouseDown={handleImageMoveStart}
           onMouseUp={handleImageMoveEnd}
           onMouseMove={handleImageMove}
-          onTouchMove={handleTouchMove}
+          onTouchMove={(e) => e.preventDefault()}
           onDragStart={(e) => e.preventDefault()}
           onWheel={handleImageWheel}
         />
