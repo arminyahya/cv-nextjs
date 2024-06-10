@@ -18,7 +18,9 @@ export default function Header({ setCurrentLang }: HeaderProps) {
 
   const switchTheme = () => {
    const targetThemeVariables = currentTheme === 'light' ? darkThemeColors : lightThemeColors;
-   for(let variableName in targetThemeVariables) {
+		document.querySelector('.main')?.classList.remove(`theme--${currentTheme}`);
+		document.querySelector('.main')?.classList.add(currentTheme === 'light' ? 'theme--dark' : 'theme--light');
+	 for(let variableName in targetThemeVariables) {
     // @ts-ignore
     document.documentElement.style.setProperty(variableName, targetThemeVariables[variableName]);
    }

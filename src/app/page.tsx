@@ -18,7 +18,7 @@ export default function Home() {
   const slideClassName =
     currentLanguage === "en" ? "slide-from-left" : "slide-from-right";
   return (
-    <main className={"main"}>
+    <main className={"main theme--light"}>
       <section className={"main-section"}>
         <div className="profile-image_wrapper margin-bottom">
           <Image
@@ -26,7 +26,7 @@ export default function Home() {
             src={`${basePath}/profile-image.jpg`}
             fill
             objectPosition="50% 50%"
-            objectFit="cover"
+            objectFit="contain"
           />
         </div>
         <div className="full-name">{translate("fullname")}</div>

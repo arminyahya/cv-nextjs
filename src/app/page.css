@@ -11,7 +11,11 @@
 .profile-image_wrapper {
 	position: relative;
 	width: 100%;
-	height: 220px;
+	height: 309px;
+}
+
+.main.theme--dark .profile-image_wrapper {
+	filter: grayscale(1);
 }
 
 .profile-image_wrapper .slide-image {
