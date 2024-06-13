@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import Modal from "./modal";
 import SlideShow from "./slideShow";
 import useTranslation from "../_translation/useTranslation";
@@ -45,9 +45,11 @@ export default function PastExperienceItem({
 			</div>
 			<div className="past-experience_item_detail_activity">
 				{summary}
+				<Suspense>
 				<GalleryButton
 					images={images}
 				/>
+				</Suspense>
 			</div>
 		</div>
 	</div>
