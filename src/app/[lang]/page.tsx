@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   description: `Discover Armin Yahya's professional background, skills, and accomplishments in their online resume. Get a glimpse of their qualifications and experience in Frontend`,
 };
 
+export function generateStaticParams() {
+  return [
+    { lang: 'fa' },
+    { lang: 'en' },
+  ]
+}
 export default function Page({ params }: PageInnerProps) {
   const { translate } = useTranslation(params.lang);
   return (
