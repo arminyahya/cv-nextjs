@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef, useState } from "react";
 import useTranslation from "../_translation/useTranslation";
 import Image from "next/image";
@@ -7,9 +8,11 @@ import ZoomInIcon from "@/Icons/zoom-in";
 import ZoomOutIcon from "@/Icons/zoom-out";
 import CloseIcon from "@/Icons/close";
 import { basePath } from "../constant";
+import { useParams, useRouter } from "next/navigation";
 
 const SlideShow = ({ images, onClose }: any) => {
-  const { currentLanguage } = useTranslation();
+	const {lang} = useParams();
+  const { currentLanguage } = useTranslation(lang as 'fa' | 'en');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [zoomLevel, setZoomLevel] = useState(1);
@@ -17,8 +20,8 @@ const SlideShow = ({ images, onClose }: any) => {
   const containerRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const prevMousePosition = useRef({ x: 0, y: 0 });
-  const lastPosition = useRef({ x: 0, y: 0 });
-  const goToNextSlide = () => {
+
+	const goToNextSlide = () => {
     setCurrentIndex((currentIndex + 1) % images.length);
   };
 

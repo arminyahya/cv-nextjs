@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import Modal from "./modal";
 import SlideShow from "./slideShow";
 import useTranslation from "../_translation/useTranslation";
+import { useParams } from "next/navigation";
 
 export default function GalleryButton({ images }: { images: string[] }) {
-	const { translate } = useTranslation();
+	const { lang } = useParams();
+	const { translate } = useTranslation(lang as 'fa' | 'en');
   const [isModalOpen, setModalOpen] = useState(false);
 
   return (
