@@ -17,14 +17,12 @@ export default function Header({ setCurrentLang }: HeaderProps) {
 	const router = useRouter();
 
   const switchTheme = () => {
+		const targetTheme = currentTheme === 'light' ? 'dark' : 'light';
    const targetThemeVariables = currentTheme === 'light' ? darkThemeColors : lightThemeColors;
-		document.querySelector('.main')?.classList.remove(`theme--${currentTheme}`);
-		document.querySelector('.main')?.classList.add(currentTheme === 'light' ? 'theme--dark' : 'theme--light');
 	 for(let variableName in targetThemeVariables) {
-    // @ts-ignore
-    document.documentElement.style.setProperty(variableName, targetThemeVariables[variableName]);
+    document.documentElement.style.setProperty(variableName, targetThemeVariables[variableName] as string);
    }
-   setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')
+	 setCurrentTheme(targetTheme)
   }
 
 	const switchLang = () => {

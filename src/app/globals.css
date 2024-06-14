@@ -2,6 +2,7 @@
 	--background-color: #fff;
 	--text-color: #000;
 	--text-color-lighter: rgb(77, 77, 77);
+	--image-filter: none;
 }
 
 @keyframes fadeIn {

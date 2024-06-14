@@ -42,7 +42,7 @@ export function generateStaticParams() {
 export default function Page({ params }: PageInnerProps) {
   const { translate } = useTranslation(params.lang);
   return (
-    <main className={"main theme--light"}>
+    <main className={`main`}>
       <section className={"main-section"}>
         <div className="profile-image_wrapper margin-bottom">
           <Image
