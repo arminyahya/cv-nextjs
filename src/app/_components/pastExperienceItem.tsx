@@ -1,5 +1,5 @@
 "use client";
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useMemo, useState } from "react";
 import Modal from "./modal";
 import SlideShow from "./slideShow";
 import useTranslation from "../_translation/useTranslation";
@@ -7,6 +7,7 @@ import YeganehIcon from "@/Icons/yeganeh";
 import GalleryButton from "./galleryButton";
 
 type PastExperienceItemProps = {
+	id: string;
 	icon: React.JSX.Element,
 	companyName: string,
 	startDate: string,
@@ -18,6 +19,7 @@ type PastExperienceItemProps = {
 }
 
 export default function PastExperienceItem({ 
+	id,
 	icon,
 	companyName,
 	startDate,
@@ -47,6 +49,7 @@ export default function PastExperienceItem({
 				{summary}
 				<Suspense>
 				<GalleryButton
+					id={id}
 					images={images}
 				/>
 				</Suspense>

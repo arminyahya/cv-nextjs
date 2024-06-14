@@ -94,6 +94,7 @@ export default function Page({ params }: PageInnerProps) {
         <HeaderTypography text={translate("past_experiences")} />
         <div className="past-experience fade-in-animation">
           <PastExperienceItem
+						id="chargoon"
             icon={<ChargoonIcon />}
             companyName={translate("chargoon")}
             startDate={translate("2020April")}
@@ -111,6 +112,7 @@ export default function Page({ params }: PageInnerProps) {
             className={"margin-bottom-2x"}
           />
           <PastExperienceItem
+						id="yeganeh_soft"
             icon={<YeganehIcon />}
             companyName={translate("yeganeh_soft")}
             startDate={translate("2018")}

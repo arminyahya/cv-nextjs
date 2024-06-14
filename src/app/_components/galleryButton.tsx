@@ -5,7 +5,7 @@ import SlideShow from "./slideShow";
 import useTranslation from "../_translation/useTranslation";
 import { useParams, usePathname, useRouter, useSearchParams } from "next/navigation";
 
-export default function GalleryButton({ images }: { images: string[] }) {
+export default function GalleryButton({ id, images }: {id: string; images: string[] }) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
  
@@ -24,7 +24,7 @@ export default function GalleryButton({ images }: { images: string[] }) {
 	const lang = params.lang;
 	const { translate } = useTranslation(lang as 'fa' | 'en');
 
-	const isModalOpen = useMemo(() => searchParams.get('slideshow'), [searchParams.get('slideshow')])
+	const isModalOpen = useMemo(() => searchParams.get(`${id}-slideshow`), [searchParams.get(`${id}-slideshow`)])
 	const router = useRouter();
   return (
     <div className="gallery-button">
@@ -42,7 +42,7 @@ export default function GalleryButton({ images }: { images: string[] }) {
       <span
         onClick={() => {
 					document.querySelector('body')?.classList.add('ReactModal__Body--open');
-					router.push(pathname + '?' + createQueryString('slideshow', 'open'))
+					router.push(pathname + '?' + createQueryString(`${id}-slideshow`, 'open'))
         }}
       >
         {translate('see_gallery')}
