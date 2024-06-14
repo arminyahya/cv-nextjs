@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import useTranslation from "../_translation/useTranslation";
 import Image from "next/image";
 import LeftArrow from "@/Icons/left-arrow";
@@ -15,7 +15,7 @@ const SlideShow = ({ images, onClose }: any) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [zoomLevel, setZoomLevel] = useState(1);
-  const imageRef = useRef(null);
+  const imageRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const prevMousePosition = useRef({ x: 0, y: 0 });
@@ -48,13 +48,29 @@ const SlideShow = ({ images, onClose }: any) => {
     setIsDragging(false);
   };
 
+	const isMovingOutsideViewport = (x: number,y: number) => {
+		var rect = (imageRef.current as HTMLImageElement).getBoundingClientRect();
+		var offsetTop = rect.top + window.scrollY + y;
+		var offsetLeft = rect.left + window.scrollX + x;
+		if(offsetLeft + rect.width < 100 || offsetLeft + 100 > window.innerWidth || offsetTop + 100 > window.innerHeight || offsetTop + rect.height < 100) {
+			return true;
+		} else {
+			return false
+		}
+	}
+
   const handleImageMove = (e: any) => {
     if (isDragging) {
       const { x, y } = position;
       const deltaX = e.clientX - prevMousePosition.current.x;
       const deltaY = e.clientY - prevMousePosition.current.y;
       prevMousePosition.current = { x: e.clientX, y: e.clientY };
-      setPosition({ x: x + deltaX, y: y + deltaY });
+			const nextX = x + deltaX;
+			const nextY = y + deltaY;
+			if(isMovingOutsideViewport(deltaX,deltaY)) {
+				return;
+			}
+      setPosition({ x: nextX, y: nextY });
     }
   };
 
@@ -93,12 +109,9 @@ const SlideShow = ({ images, onClose }: any) => {
           touch2.clientY - touch1.clientY
         );
         const diff = currentDistance - initialDistance.current;
-
-        // Increase scale on pinch out
         if (diff > 0) {
           handleZoom(0.1);
         }
-        // Decrease scale on pinch in
         else {
           handleZoom(-0.1);
         }
@@ -106,12 +119,14 @@ const SlideShow = ({ images, onClose }: any) => {
       } else {
         const deltaX = e.touches[0].clientX - startX.current;
         const deltaY = e.touches[0].clientY - startY.current;
-
         startX.current = e.touches[0].clientX;
         startY.current = e.touches[0].clientY;
+				if(isMovingOutsideViewport(deltaX,deltaY)) {
+					return;
+				}
         setPosition({
           x: position.x + deltaX,
-          y: position.x + deltaY,
+          y: position.y + deltaY,
         });
       }
     }
@@ -158,6 +173,9 @@ const SlideShow = ({ images, onClose }: any) => {
           className="slide-image"
           style={{
             transform: `scale(${zoomLevel}) translate(${position.x}px, ${position.y}px)`,
+						transformOrigin: 'top left',
+						position: 'relative',
+						overflow: 'hidden',
             cursor: zoomLevel > 1 ? "move" : "default",
           }}
           onMouseDown={handleImageMoveStart}
