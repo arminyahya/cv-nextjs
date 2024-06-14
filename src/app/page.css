@@ -224,6 +224,7 @@
 	display: inline-block;
 	color: var(--text-color);
 	text-decoration: underline;
+	margin-inline-start: 4px;
 }
 
 .modal-overlay {
@@ -257,8 +258,9 @@
 	z-index: 200;
 	background-color: rgba(0, 0, 0, 0.2);
 	padding: 0px 14px;
-}
-
+	text-align: right;
+	}
+	
 .slideshow-image-toolbar_item {
 	display: inline-block;
 	padding: 20px 6px;
@@ -299,14 +301,6 @@
 	opacity: 1;
 }
 
-.prev-button {
-  left: 0;
-}
-
-.next-button {
-  right: 0;
-}
-
 html[dir="rtl"] .contact-info_item_icon{
 	margin-right: 0px;
 	margin-left: 10px;
@@ -323,6 +317,26 @@ html[dir="rtl"] .personal-info_item_label {
 	margin-right: 0px;
 	margin-left: 8px;
 
+}
+
+html[dir="rtl"] .slideshow-image-toolbar{
+	text-align: left;
+}
+
+html[dir="rtl"] .prev-button {
+	left:0px
+}
+
+html[dir="rtl"] .next-button {
+	right:0px
+}
+
+html[dir="ltr"] .prev-button {
+	right:0px
+}
+
+html[dir="ltr"] .next-button {
+	left:0px
 }
 
 .small-horizontal-line {

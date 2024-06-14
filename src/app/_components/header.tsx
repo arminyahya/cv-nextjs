@@ -8,10 +8,9 @@ import MultiLangIcon from "@/Icons/multi-lang";
 import { useParams, useRouter } from "next/navigation";
 
 type HeaderProps = {
-	setCurrentLang: (lang: "fa" | "en") => void;
 }
 
-export default function Header({ setCurrentLang }: HeaderProps) {
+export default function Header({  }: HeaderProps) {
 	const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'); 
 	const { lang } = useParams();
 	const router = useRouter();
@@ -27,7 +26,6 @@ export default function Header({ setCurrentLang }: HeaderProps) {
 
 	const switchLang = () => {
 		const nextLanguage = lang === 'en' ? 'fa' : 'en';
-		setCurrentLang(nextLanguage);
 		const body = document.querySelector('body');
 		body?.classList.remove('fade-in-animation');
 		body?.classList.add('fade-in-animation');

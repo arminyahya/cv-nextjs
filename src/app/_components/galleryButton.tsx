@@ -23,8 +23,7 @@ export default function GalleryButton({ id, images }: {id: string; images: strin
 	const params = useParams();
 	const lang = params.lang;
 	const { translate } = useTranslation(lang as 'fa' | 'en');
-
-	const isModalOpen = useMemo(() => searchParams.get(`${id}-slideshow`), [searchParams.get(`${id}-slideshow`)])
+	const isModalOpen = useMemo(() => searchParams.get(`${id}-slideshow`), [searchParams.get(`${id}-slideshow`)]);
 	const router = useRouter();
   return (
     <div className="gallery-button">
