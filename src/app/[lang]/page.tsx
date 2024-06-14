@@ -13,7 +13,7 @@ import PersonalInfoItem from "../_components/personalInfoItem";
 import { basePath } from "../constant";
 import PastExperienceItem from "../_components/pastExperienceItem";
 import HeaderTypography from "../_components/headerTypography";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 
 type PageInnerProps = {
   params: { lang: "fa" | "en" };
@@ -23,6 +23,15 @@ export const metadata: Metadata = {
   title: 'Armin Yahya Resume',
   description: `Discover Armin Yahya's professional background, skills, and accomplishments in their online resume. Get a glimpse of their qualifications and experience in Frontend`,
 };
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  // Also supported by less commonly used
+  // interactiveWidget: 'resizes-visual',
+}
 
 export function generateStaticParams() {
   return [
@@ -79,7 +88,8 @@ export default function Page({ params }: PageInnerProps) {
           <li className="skills_item">Scrum</li>
           <li className="skills_item">Software Development</li>
         </ul>
-      </div>      </section>
+      </div>
+			      </section>
       <section className={"main-section "}>
         <HeaderTypography text={translate("past_experiences")} />
         <div className="past-experience fade-in-animation">

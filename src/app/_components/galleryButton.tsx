@@ -41,7 +41,6 @@ export default function GalleryButton({ images }: { images: string[] }) {
       </Modal>
       <span
         onClick={() => {
-					(document.querySelector('html') as any).scrollTop = 0;
 					document.querySelector('body')?.classList.add('ReactModal__Body--open');
 					router.push(pathname + '?' + createQueryString('slideshow', 'open'))
         }}

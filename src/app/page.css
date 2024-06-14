@@ -252,13 +252,14 @@
 	opacity: 0.7;
 }
 
-.slideshow-container {
-}
-
 .slideshow-image-toolbar {
 	position: absolute;
 	top: 0px;
+	right: 0px;
 	width: 100%;
+	z-index: 200;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 0px 14px;
 }
 
 .slideshow-image-toolbar_item {
@@ -279,6 +280,7 @@
 .slide-image {
 	max-width: 100%;
 	max-height: 100%;
+	z-index: 100;
 }
 
 .prev-button, .next-button {

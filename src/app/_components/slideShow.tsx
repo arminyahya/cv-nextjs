@@ -10,6 +10,7 @@ import CloseIcon from "@/Icons/close";
 import { basePath } from "../constant";
 import { useParams, useRouter } from "next/navigation";
 
+
 const SlideShow = ({ images, onClose }: any) => {
 	const {lang} = useParams();
   const { currentLanguage } = useTranslation(lang as 'fa' | 'en');
@@ -20,6 +21,9 @@ const SlideShow = ({ images, onClose }: any) => {
   const containerRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const prevMousePosition = useRef({ x: 0, y: 0 });
+	const startX = useRef(0);
+	const startY= useRef(0);
+	const initialDistance = useRef(0);
 
 	const goToNextSlide = () => {
     setCurrentIndex((currentIndex + 1) % images.length);
@@ -43,12 +47,13 @@ const SlideShow = ({ images, onClose }: any) => {
   };
 
   const handleImageMoveEnd = (e: any) => {
+		alert('handleImageMoveEnd')
+
     setIsDragging(false);
   };
 
   const handleImageMove = (e: any) => {
     if (isDragging) {
-      console.log(isDragging);
       const { x, y } = position;
       const deltaX = e.clientX - prevMousePosition.current.x;
       const deltaY = e.clientY - prevMousePosition.current.y;
@@ -67,18 +72,55 @@ const SlideShow = ({ images, onClose }: any) => {
     });
   };
 
-  const handleTouchMove = (e: any) => {
-    if (e.touches.length === 2) {
-      const touch1 = e.touches[0];
-      const touch2 = e.touches[1];
-      const distance = Math.hypot(
-        touch1.clientX - touch2.clientX,
-        touch1.clientY - touch2.clientY
-      );
-      const zoomDelta = distance / 100 - 1;
-      handleZoom(zoomDelta);
+	const handleTouchStart = (e: any) => {
+		const touch1 = e.touches[0];
+    const touch2 = e.touches[1];
+
+    if (touch1 && touch2) {
+      const distance = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
+      initialDistance.current = distance;
     }
-  };
+
+		startX.current = e.touches[0].clientX;
+		startY.current = e.touches[0].clientY;
+		setIsDragging(true);
+	}
+	
+
+	const handleTouchMove = (e: any) => {
+		const touch1 = e.touches[0];
+    const touch2 = e.touches[1];
+		if (isDragging) {
+			  if (touch1 && touch2 && initialDistance) {
+      const currentDistance = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
+      const diff = currentDistance - initialDistance.current;
+
+      // Increase scale on pinch out
+      if (diff > 0) {
+        handleZoom(0.1);
+      }
+      // Decrease scale on pinch in
+      else {
+        handleZoom(-0.1);
+
+      }
+			initialDistance.current = currentDistance;
+			} else {
+			const deltaX = e.touches[0].clientX - startX.current;
+			const deltaY = e.touches[0].clientY - startY.current;
+			
+			startX.current = e.touches[0].clientX;
+			startY.current = e.touches[0].clientY;
+			setPosition({
+				x: position.x + deltaX,
+				y: position.x + deltaY,
+			});
+		}
+	}}
+	
+	const handleTouchEnd = () => {
+		setIsDragging(false);
+	}
 
   const handleImageWheel = (e: any) => {
     const delta = e.deltaY > 0 ? -0.1 : 0.1;
@@ -113,8 +155,10 @@ const SlideShow = ({ images, onClose }: any) => {
           onMouseDown={handleImageMoveStart}
           onMouseUp={handleImageMoveEnd}
           onMouseMove={handleImageMove}
-          onTouchMove={(e) => e.preventDefault()}
           onDragStart={(e) => e.preventDefault()}
+					onTouchStart={handleTouchStart}
+					onTouchMove={handleTouchMove}
+					onTouchEnd={handleTouchEnd}
           onWheel={handleImageWheel}
         />
       </div>
