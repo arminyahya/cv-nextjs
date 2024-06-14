@@ -295,6 +295,7 @@
 	display: flex;
 	align-items: center;
 	opacity: 0.7;
+	z-index: 200;
 }
 
 .prev-button:hover, .next-button:hover {
