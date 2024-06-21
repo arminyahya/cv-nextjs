@@ -131,30 +131,6 @@
 	opacity: 0;
 	animation: fadeIn 0.5s forwards;
 }
-/* .skills_item:nth-child(1) {
-	animation-delay: 1s;
-}
-
-.skills_item:nth-child(2) {
-	animation-delay: 1.25s;
-}
-
-.skills_item:nth-child(3) {
-	animation-delay: 1.5s;
-}
-
-
-.skills_item:nth-child(4) {
-	animation-delay: 1.75s;
-}
-
-.skills_item:nth-child(5) {
-	animation-delay: 2s;
-}
-
-.skills_item:nth-child(6) {
-	animation-delay: 2.25s;
-} */
 
 .past-experience_header {
 }
@@ -211,13 +187,13 @@
 	position: relative;
 	left: unset;
 	opacity: 0;
-  animation: 1s fadeIn forwards;
+  	animation: 1s fadeIn forwards;
 }
 
 .slide-from-left {
 	position: relative;
 	opacity: 0;
-  animation: 1s fadeIn forwards;
+  	animation: 1s fadeIn forwards;
 }
 
 .gallery-button {
@@ -240,7 +216,6 @@
 }
 
 .modal-content {
-  /* background: #fff; */
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -292,10 +267,10 @@
   cursor: pointer;
   padding: 10px 15px;
   font-size: 1.5em;
-	display: flex;
-	align-items: center;
-	opacity: 0.7;
-	z-index: 200;
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  z-index: 200;
 }
 
 .prev-button:hover, .next-button:hover {
@@ -354,9 +329,10 @@ html[dir="ltr"] .next-button {
 	.main {
 		flex-direction: row;
 	}
-  .gallery-button, .header  {
-    display: none;
-  }
+	
+  	.gallery-button, .header  {
+  	  display: none;
+  	}
 
 	.profile-image_wrapper {
 		width: 220px;

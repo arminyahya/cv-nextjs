@@ -10,19 +10,19 @@ import { useParams, useRouter } from "next/navigation";
 type HeaderProps = {
 }
 
-export default function Header({  }: HeaderProps) {
-	const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'); 
+export default function Header({ }: HeaderProps) {
+	const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
 	const { lang } = useParams();
 	const router = useRouter();
 
-  const switchTheme = () => {
+	const switchTheme = () => {
 		const targetTheme = currentTheme === 'light' ? 'dark' : 'light';
-   const targetThemeVariables = currentTheme === 'light' ? darkThemeColors : lightThemeColors;
-	 for(let variableName in targetThemeVariables) {
-    document.documentElement.style.setProperty(variableName, targetThemeVariables[variableName] as string);
-   }
-	 setCurrentTheme(targetTheme)
-  }
+		const targetThemeVariables = currentTheme === 'light' ? darkThemeColors : lightThemeColors;
+		for (let variableName in targetThemeVariables) {
+			document.documentElement.style.setProperty(variableName, targetThemeVariables[variableName] as string);
+		}
+		setCurrentTheme(targetTheme)
+	}
 
 	const switchLang = () => {
 		const nextLanguage = lang === 'en' ? 'fa' : 'en';

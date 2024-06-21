@@ -1,16 +1,4 @@
-import Image from "next/image";
 import "./page.css";
-import { useContext, useState } from "react";
-import { darkThemeColors, lightThemeColors } from "./constant";
-import LinkedinIcon from "@/Icons/linkedin-icon";
-import GmailIcon from "@/Icons/gmail-icon";
-import useTranslation from "./_translation/useTranslation";
-import AppContext from "@/appContext";
-import GalleryButton from "./_components/galleryButton";
-import YeganehIcon from "@/Icons/yeganeh";
-import ChargoonIcon from "@/Icons/chargoon";
-import PersonalInfoItem from "./_components/personalInfoItem";
-import { basePath } from "./constant";
 import { Metadata , Viewport} from "next";
 import Page from './[lang]/page';
 

@@ -1,10 +1,9 @@
 "use client";
 import GithubIcon from "@/Icons/github";
-import LinkedinIcon from "@/Icons/linkedin-icon";
-import StackoverflowIcon from "@/Icons/stackoverflow-icon";
-import TelegramIcon from "@/Icons/telegram-icon";
+import LinkedinIcon from "@/Icons/linkedin";
+import StackoverflowIcon from "@/Icons/stackoverflow";
+import TelegramIcon from "@/Icons/telegram";
 import Link from "next/link";
-import react, { useContext, useState } from "react";
 
 type FooterProps = {};
 

@@ -1,9 +1,5 @@
 "use client";
-import React, { useState } from "react";
-import Modal from "./modal";
-import SlideShow from "./slideShow";
-import useTranslation from "../_translation/useTranslation";
-
+import React from "react";
 export default function PersonalInfoItem({ label, value }: { label: string, value: string }) {
   return (
 		<div className="personal-info_item">

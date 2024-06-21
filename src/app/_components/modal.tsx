@@ -1,4 +1,3 @@
-import CloseIcon from '@/Icons/close';
 import React, { DOMElement, useState } from 'react';
 import ReactDOM from 'react-dom';
 
