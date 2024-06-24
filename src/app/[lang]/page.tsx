@@ -41,7 +41,7 @@ export default function Page({ params }: PageInnerProps) {
         <div className="profile-image_wrapper margin-bottom">
           <Image
             alt="armin-yahya"
-            src={`${basePath}/profile-image.jpg`}
+            src={`${basePath}/profile-image-3.jpg`}
             fill
             objectPosition="50% 50%"
             objectFit="contain"
