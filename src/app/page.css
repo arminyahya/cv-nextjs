@@ -123,6 +123,14 @@
 	flex-direction: column;
 }
 
+.skills_inner ul {
+	padding: 0;
+}
+
+.skills_item {
+	list-style: none;
+}
+
 .li {
 	margin-bottom: 10px;
 }
@@ -181,6 +189,14 @@
 	.skills_inner {
 		flex-direction: row;
 	}
+
+	.skills_inner ul {
+		padding-inline-start: 40px;
+	}
+
+	.skills_inner ul:first-child {
+		padding: 0;
+	}
 }
 
 .slide-from-right {
@@ -200,7 +216,6 @@
 	display: inline-block;
 	color: var(--text-color);
 	text-decoration: underline;
-	margin-inline-start: 4px;
 }
 
 .modal-overlay {
@@ -344,3 +359,10 @@ html[dir="ltr"] .next-button {
 	}
 }
 
+.company-tasks {
+	padding: 0;
+}
+
+.company-tasks_item {
+	list-style: none;
+}

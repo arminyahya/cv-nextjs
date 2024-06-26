@@ -94,7 +94,18 @@ export default function Page({ params }: PageInnerProps) {
             startDate={translate("2020April")}
             endDate={translate("present")}
             role={translate("role")}
-            summary={translate("chargoon_work_description")}
+            companyTasks={[
+								translate("As an infrastructure team member, I participate in migrating to Redux Toolkit from MobX"),
+								translate("I documented some projects on the knowledgebase to help other team members or company engineers"),
+								translate("Designed a diagram environment using the GoJS library to create database schemas"),
+								translate("Helped new Infrastructure team members get familiar with the codebase"),
+								translate("Created a simple form generator for software that doesn’t need a complex form designer"),
+								translate("As a member of the infrastructure team, I successfully resolved issues that were reported by other teams"),
+								translate("I also introduced a new tool for generating TypeScript from C# models"),
+								translate("I refactored LESS styles to utilize CSS variables for theming"),
+								translate("I created a custom AJAX solution to replace jQuery AJAX throughout the software"),
+								translate("I improved the performance of certain components (such as the tree) to handle large amounts of data more efficiently"),
+							]}
             images={[
               "/chargoon-1.jpg",
               "/chargoon-2.jpg",
@@ -112,7 +123,11 @@ export default function Page({ params }: PageInnerProps) {
             startDate={translate("2018")}
             endDate={translate("2020March")}
             role={translate("role")}
-            summary={translate("yeganeh_soft_description")}
+            companyTasks={[
+								translate("I familiarized myself with the Ant Design framework"),
+								translate("Collaborated closely with a UI designer as a frontend developer"),
+								translate("Participated in creating both a Document Manager and EDMS Software, both of which are web-based"),
+						]}
             images={[
               "/yeganeh-1.jpg",
               "/yeganeh-2.jpg",

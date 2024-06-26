@@ -9,7 +9,7 @@ type PastExperienceItemProps = {
   startDate: string;
   endDate: string;
   role: string;
-  summary: string;
+  companyTasks: string[];
   images: string[];
   className: string;
 };
@@ -21,7 +21,7 @@ export default function PastExperienceItem({
   startDate,
   endDate,
   role,
-  summary,
+  companyTasks,
   images,
   className,
 }: PastExperienceItemProps) {
@@ -38,11 +38,14 @@ export default function PastExperienceItem({
         </div>
         <div className="past-experience_item_detail_role">{role}</div>
         <div className="past-experience_item_detail_activity">
-          {summary}
+          <ul className="company-tasks">
+            {companyTasks.map((task) => (
+              <li className="company-tasks_item">• {task}</li>
+            ))}
+          </ul>
           <Suspense>
             <GalleryButton id={id} images={images} />
           </Suspense>
-					.
         </div>
       </div>
     </div>
