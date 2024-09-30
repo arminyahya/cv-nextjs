@@ -24,16 +24,20 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
   const [isZooming, setIsZooming] = useState(false)
   const { lang } = useParams();
   const { translate } = useTranslation(lang as "fa" | 'en');
+  const [isMediaLoaded, setIsMediaLoaded] = useState(false)
 
   const nextItem = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length)
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+    setIsMediaLoaded(false)
   }
 
   const prevItem = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length)
+    setIsMediaLoaded(false)
   }
 
   const currentItem = items[currentIndex]
+  console.log(isMediaLoaded);
 
   return (
     <div className="responsive-slider">
@@ -64,22 +68,31 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
                   </button>
                 </div>
                 <TransformComponent>
-                  {currentItem.type === 'image' ? (
-                    <img
-                      src={currentItem.src}
-                      alt={`Item ${currentIndex + 1}`}
-                      className="slider-media"
-                      style={{ cursor: isZooming ? 'zoom-in' : 'move' }}
-                    />
-                  ) : (
-                    <video
-                      src={currentItem.src}
-                      className="slider-media"
-                      controls
-                      style={{ cursor: isZooming ? 'zoom-in' : 'move' }}
-                      autoPlay
-                    />
-                  )}
+                  <div className="media-container">
+                    {!isMediaLoaded && (
+                      <div className="media-placeholder">
+                        {translate("loading")}
+                      </div>
+                    )}
+                    {currentItem.type === 'image' ? (
+                      <img
+                        src={currentItem.src}
+                        alt={`Item ${currentIndex + 1}`}
+                        className={`slider-media ${isMediaLoaded ? 'loaded' : 'loading'}`}
+                        style={{ cursor: isZooming ? 'zoom-in' : 'move' }}
+                        onLoad={() => setIsMediaLoaded(true)}
+                      />
+                    ) : (
+                      <video
+                        src={currentItem.src}
+                        className={`slider-media ${isMediaLoaded ? 'loaded' : 'loading'}`}
+                        controls
+                        preload="metadata"
+                        style={{ cursor: isZooming ? 'zoom-in' : 'move' }}
+                        onLoadedData={() => setIsMediaLoaded(true)}
+                      />
+                    )}
+                  </div>
                 </TransformComponent>
               </>
             )}
@@ -87,8 +100,8 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
         </div>
 
         {/* Information Section */}
-        {!noDescription &&<div className="info-section">
-           <div className="info-content">
+        {!noDescription && <div className="info-section">
+          <div className="info-content">
             {items[currentIndex].description}
           </div>
           <div className="navigation-buttons">

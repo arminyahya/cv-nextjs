@@ -36,7 +36,8 @@ The second feature is event-driven actions. With this feature, you can make anot
 	gallery_chargoon_design_operation_on_events: `So far, I have explained complex validation. Now, we will address event-driven actions and the two fields: research topic and research group mate. Suppose you want to have the control on your form that if a research topic is specified, the research group mate must also be filled. However, if the research topic is not filled or the student has not yet selected a research topic, we can leave the two fields empty. In this image, I used the condition builder to write that if the value of the research topic changes, then make the research group mate field mandatory.`,
 	gallery_chargoon_output_video: `This is the output of our form being filled by the user. Pay attention to the video; if the student is a first-grader and selects the football field, a message will be displayed. Also, if they fill in the research topic, the research group mate field will immediately become mandatory.`,
 	next: `Next`,
-  	previous: `Previous`
+  	previous: `Previous`,
+	loading:'Loading'
 };
 
 export default EN_Dictionary;

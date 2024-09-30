@@ -61,7 +61,6 @@
     background-color: #e0e0e0;
     overflow: hidden;
     position: relative;
-    min-height: 200px;
   }
   
   .zoom-controls {
@@ -117,8 +116,9 @@
     }
   
     .info-section {
-      width: 500px;
-      max-width: 500px;
+      width: 300px;
+      max-width: 300px;
+      min-width: 300px;
       order: -1; /* Move info section to the left on desktop */
     }
   
@@ -137,4 +137,36 @@
     right: 10px;
     left: unset;
   
+  }
+  .media-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .media-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 1.2rem;
+  }
+  
+  .slider-media {
+    width: 100%;
+    height: 100%;
+  } 
+  
+  .slider-media.loading {
+    opacity: 0;
+  }
+  
+  .slider-media.loaded {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
   }
