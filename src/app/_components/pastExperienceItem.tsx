@@ -1,6 +1,7 @@
 "use client";
 import React, { Suspense } from "react";
 import GalleryButton from "./galleryButton";
+import { SliderItem } from "./slider-with-info";
 
 type PastExperienceItemProps = {
   id: string;
@@ -10,8 +11,9 @@ type PastExperienceItemProps = {
   endDate: string;
   role: string;
   companyTasks: string[];
-  images: string[];
+  items: SliderItem[];
   className: string;
+  noDescription?: boolean
 };
 
 export default function PastExperienceItem({
@@ -22,8 +24,9 @@ export default function PastExperienceItem({
   endDate,
   role,
   companyTasks,
-  images,
+  items,
   className,
+  noDescription
 }: PastExperienceItemProps) {
   return (
     <div className={`past-experience_item ${className}`}>
@@ -44,7 +47,7 @@ export default function PastExperienceItem({
             ))}
           </ul>
           <Suspense>
-            <GalleryButton id={id} images={images} />
+            <GalleryButton id={id} items={items} noDescription={noDescription}/>
           </Suspense>
         </div>
       </div>

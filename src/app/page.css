@@ -226,7 +226,7 @@
   height: 100vh;
   background: #000;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
@@ -234,6 +234,7 @@
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 .close-button {
@@ -263,7 +264,7 @@
 }
 
 .slideshow-image-container {
-	max-width:1260px;
+	/* max-width:1260px; */
 }
 
 .slide-image {
@@ -300,8 +301,10 @@ html[dir="rtl"] .contact-info_item_icon{
 html[dir="rtl"] .past-experience_item_icon_wrapper {
 	margin-left: 10px;
 }
-.ReactModal__Body--open {
+
+body.ReactModal__Body--open {
 	overflow: hidden;
+	max-width: 100%;
 }
 
 html[dir="rtl"] .personal-info_item_label {
