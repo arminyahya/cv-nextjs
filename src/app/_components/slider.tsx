@@ -37,11 +37,10 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
   }
 
   const currentItem = items[currentIndex]
-  console.log(isMediaLoaded);
 
   return (
     <div className="responsive-slider">
-      <div className="slider-container">
+      <div className={`slider-container ${noDescription ? 'no-description' : ''}`}>
         {/* Media Section */}
         <div className="media-section">
           <TransformWrapper
@@ -100,7 +99,7 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
         </div>
 
         {/* Information Section */}
-        {!noDescription && <div className="info-section">
+        <div className="info-section">
           <div className="info-content">
             {items[currentIndex].description}
           </div>
@@ -108,7 +107,7 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
             <button onClick={prevItem} className="nav-button">{translate('previous')}</button>
             <button onClick={nextItem} className="nav-button">{translate('next')}</button>
           </div>
-        </div>}
+        </div>
       </div>
 
     </div>

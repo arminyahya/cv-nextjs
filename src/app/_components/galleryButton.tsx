@@ -7,7 +7,7 @@ import {
   useRouter,
   useSearchParams,
 } from "next/navigation";
-import Slider, { SliderItem } from "./slider-with-info";
+import Slider, { SliderItem } from "./slider";
 import dynamic from "next/dynamic";
 
 const Modal = dynamic(() => import('./modal'), { ssr: false })

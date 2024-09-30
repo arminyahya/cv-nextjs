@@ -37,7 +37,13 @@ The second feature is event-driven actions. With this feature, you can make anot
 	gallery_chargoon_output_video: `This is the output of our form being filled by the user. Pay attention to the video; if the student is a first-grader and selects the football field, a message will be displayed. Also, if they fill in the research topic, the research group mate field will immediately become mandatory.`,
 	next: `Next`,
   	previous: `Previous`,
-	loading:'Loading'
+	loading:'Loading',
+	gallery_yeganeh_dabirkhone_orgchart: `In this image, you can see the organizational positions displayed in a nested menu style. Each position may have sub-positions. As you can see, when the user clicks on the production manager, the sub-positions, meaning the programmers, are displayed in the next column.`,
+    gallery_yeganeh_dabirkhone_cartable: `This page shows the user’s received letters. The categorization of letters in the user’s inbox is done using colors next to the cards. On this page, the user can search or filter through the letters. Pay attention to the date at the top of the cards. A user may receive several letters throughout the day. The user’s letters are grouped by day to make it easier for the user to find them.`,
+    gallery_yeganeh_dabirkhone_adduser: `This modal is for adding a user to the application. As you can see, this modal has a specific UI designed by the UI/UX team.`,
+    gallery_yeganeh_old_dabirkhone_add_letter: `This is the form related to adding a letter, which has been implemented using the Ant Design library. This application was the initial version of the unique company’s secretariat, which was later replaced with a new design.`,
+    gallery_yeganeh_edms_orgchart: `This image relates to the display of organizational positions in the document management software.`,
+    gallery_yeganeh_edms_documentgroup: `This is the data entry form for one of the entities in the document software.`,
 };
 
 export default EN_Dictionary;

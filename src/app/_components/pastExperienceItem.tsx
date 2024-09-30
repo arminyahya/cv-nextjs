@@ -1,7 +1,7 @@
 "use client";
 import React, { Suspense } from "react";
 import GalleryButton from "./galleryButton";
-import { SliderItem } from "./slider-with-info";
+import { SliderItem } from "./slider";
 
 type PastExperienceItemProps = {
   id: string;

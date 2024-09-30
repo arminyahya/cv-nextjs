@@ -134,11 +134,11 @@ export default function Page({ params }: PageInnerProps) {
               translate("Participated in creating both a Document Manager and EDMS Software, both of which are web-based"),
             ]}
             items={[
-              { type: 'image', src: "/yeganeh-1.jpg", description: '' },
-              { type: 'image', src: "/yeganeh-2.jpg", description: '' },
-              { type: 'image', src: "/yeganeh-3.jpg", description: '' },
-              { type: 'image', src: "/yeganeh-5.jpg", description: '' },
-              { type: 'image', src: "/yeganeh-6.jpg", description: '' },
+              { type: 'image', src: "/yeganeh-1.jpg", description: translate("gallery_yeganeh_dabirkhone_orgchart") },
+              { type: 'image', src: "/yeganeh-2.jpg", description: translate("gallery_yeganeh_dabirkhone_cartable") },
+              { type: 'image', src: "/yeganeh-3.jpg", description: translate("gallery_yeganeh_dabirkhone_adduser") },
+              { type: 'image', src: "/yeganeh-5.jpg", description: translate("gallery_yeganeh_edms_orgchart") },
+              { type: 'image', src: "/yeganeh-6.jpg", description: translate("gallery_yeganeh_edms_documentgroup") },
             ]}
             className={"margin-bottom-2x"}
             noDescription={true}
