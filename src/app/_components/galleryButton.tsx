@@ -1,7 +1,5 @@
 "use client";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import Modal from "./modal";
-import SlideShow from "./slideShow";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import useTranslation from "../_translation/useTranslation";
 import {
   useParams,
@@ -9,13 +7,20 @@ import {
   useRouter,
   useSearchParams,
 } from "next/navigation";
+import Slider, { SliderItem } from "./slider";
+import dynamic from "next/dynamic";
+
+const Modal = dynamic(() => import('./modal'), { ssr: false })
+
 
 export default function GalleryButton({
   id,
-  images,
+  items,
+  noDescription
 }: {
   id: string;
-  images: string[];
+  items: SliderItem[];
+  noDescription?: boolean
 }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -38,15 +43,24 @@ export default function GalleryButton({
     () => searchParams.get(`${id}-slideshow`),
     [searchParams.get(`${id}-slideshow`)]
   );
+  const wasIOpen = useRef(false);
+
   useEffect(() => {
+    console.log(id && isModalOpen);
     if (isModalOpen) {
       document.querySelector("body")?.classList.add("ReactModal__Body--open");
+      wasIOpen.current = true;
     } else {
-      document
-        .querySelector("body")
-        ?.classList.remove("ReactModal__Body--open");
+      if (wasIOpen.current) {
+        document
+          .querySelector("body")
+          ?.classList.remove("ReactModal__Body--open");
+        wasIOpen.current = false;
+      }
+
     }
   }, [isModalOpen]);
+
 
   const router = useRouter();
   return (
@@ -57,7 +71,7 @@ export default function GalleryButton({
           router.back();
         }}
       >
-        <SlideShow images={images} />
+        <Slider items={items} onClose={() => { router.back() }} noDescription={noDescription} />
       </Modal>
       <span
         onClick={() => {
