@@ -6,6 +6,7 @@ import { ZoomIn, ZoomOut, Move, X } from 'lucide-react'
 import { useParams } from 'next/navigation'
 import useTranslation from '../../_translation/useTranslation'
 import './slider.style.css'
+import { basePath } from '@/app/constant'
 
 export interface SliderItem {
   type: 'image' | 'video';
@@ -75,7 +76,7 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
                     )}
                     {currentItem.type === 'image' ? (
                       <img
-                        src={currentItem.src}
+                        src={`${basePath}${currentItem.src}`}
                         alt={`Item ${currentIndex + 1}`}
                         className={`slider-media ${isMediaLoaded ? 'loaded' : 'loading'}`}
                         style={{ cursor: isZooming ? 'zoom-in' : 'move' }}
@@ -83,7 +84,7 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
                       />
                     ) : (
                       <video
-                        src={currentItem.src}
+                        src={`${basePath}${currentItem.src}`}
                         className={`slider-media ${isMediaLoaded ? 'loaded' : 'loading'}`}
                         controls
                         preload="metadata"
