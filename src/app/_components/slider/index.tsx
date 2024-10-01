@@ -4,8 +4,8 @@ import { useState } from 'react'
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
 import { ZoomIn, ZoomOut, Move, X } from 'lucide-react'
 import { useParams } from 'next/navigation'
-import useTranslation from '../_translation/useTranslation'
-import './slider.css'
+import useTranslation from '../../_translation/useTranslation'
+import './slider.style.css'
 
 export interface SliderItem {
   type: 'image' | 'video';
@@ -40,7 +40,7 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
 
   return (
     <div className="responsive-slider">
-      <div className={`slider-container ${noDescription ? 'no-description' : ''}`}>
+      <div className={`slider-container`}>
         {/* Media Section */}
         <div className="media-section">
           <TransformWrapper
