@@ -119,8 +119,8 @@
 }
 
 .skills_inner {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .skills_inner ul {
@@ -197,6 +197,11 @@
 	display: inline-block;
 	color: var(--text-color);
 	text-decoration: underline;
+	cursor: pointer;
+}
+
+.for-print-only {
+	display: none;
 }
 
 .modal-overlay {
@@ -341,6 +346,10 @@ html[dir="ltr"] .next-button {
 	.skills_inner {
 		flex-direction: row;
 	}
+
+	.gallery-button.for-print-only {
+		display: inline-block;
+	}
 }
 
 .company-tasks {
@@ -361,10 +370,6 @@ html[dir="ltr"] .next-button {
 	}
 	.skills_inner {
 		flex-direction: row;
-	}
-
-	.skills_inner ul {
-		padding-inline-start: 40px;
 	}
 
 	.skills_inner ul:first-child {
