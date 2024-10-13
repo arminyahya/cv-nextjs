@@ -34,7 +34,7 @@ export default function PastExperienceItem({
   const params = useParams();
   const lang = params.lang;
   const { translate } = useTranslation(lang as "fa" | "en");
-console.log(lang);
+
   return (
     <div className={`past-experience_item ${className}`}>
       <div className="past-experience_item_icon_wrapper">

@@ -77,10 +77,13 @@ export default function Page({ params }: PageInnerProps) {
             <li className="skills_item">Git</li>
           </ul>
           <ul>
-            <li className="skills_item">Sass</li>
+            <li className="skills_item">Tailwind CSS</li>
             <li className="skills_item">NodeJS</li>
             <li className="skills_item">Scrum</li>
             <li className="skills_item">Software Development</li>
+          </ul>
+          <ul>
+            <li className="skills_item">Lerna</li>
           </ul>
         </div>
       </section>
