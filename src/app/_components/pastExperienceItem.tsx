@@ -36,12 +36,12 @@ export default function PastExperienceItem({
   const { translate } = useTranslation(lang as "fa" | "en");
 
   return (
-    <div className={`flex ${className}`}>
-      <div className="w-14 mr-2">
+    <div className={`flex mb-10 ${className}`}>
+      <div className="w-14 me-3">
         <div className="past-experience_item_icon">{icon}</div>
       </div>
       <div>
-        <div className="text-xs">
+        <div className="text-xs mb-2">
           {companyName}
           <div className="small-horizontal-line"></div>
           {startDate} / {endDate}

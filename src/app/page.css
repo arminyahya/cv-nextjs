@@ -17,26 +17,10 @@
 	display: none;
 }
 
-html[dir="rtl"] .contact-info_item_icon{
-	margin-right: 0px;
-	margin-left: 10px;
-}
-
-html[dir="rtl"] .past-experience_item_icon_wrapper {
-	margin-left: 10px;
-}
-
 body.ReactModal__Body--open {
 	overflow: hidden;
 	max-width: 100%;
 }
-
-html[dir="rtl"] .personal-info_item_label {
-	margin-right: 0px;
-	margin-left: 8px;
-
-}
-
 
 .small-horizontal-line {
 	display: inline-block;
@@ -72,23 +56,7 @@ html[dir="rtl"] .personal-info_item_label {
 }
 
 @media only screen and (min-width: 600px){
-	.main {
-		flex-direction: row;
-	}
-
-	.profile-image_wrapper {
-		width: 220px !important;
-	}
-	.skills_inner {
-		flex-direction: row;
-	}
-
 	.skills_inner ul:first-child {
 		padding: 0;
-	}
-
-	.modal-content {
-		padding: 20px;
-		height: min-content;
 	}
 }

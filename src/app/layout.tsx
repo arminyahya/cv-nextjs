@@ -16,18 +16,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-	const {lang} = useParams();
-	
+  const { lang } = useParams();
+
   return (
     <html dir={lang === "en" ? "ltr" : "rtl"} lang={lang as "en" | "fa"}>
       <body
         className={
-          lang === "en" ? openSans.className : iranYekan.className
+          lang === "en" ? openSans.className : iranYekan.className + ' relative my-0 mx-auto w-full bg-background-color'
         }
       >
-          <Header  />
-          {children}
-					<Footer />
+        <Header />
+        {children}
+        <Footer />
         <div id="portal-modal"></div>
       </body>
     </html>
