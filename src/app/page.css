@@ -1,12 +1,3 @@
-.about-me {
-	animation-delay: 0.25;
-	animation: fadeIn 1s forwards;
-}
-
-.skills_item {
-	animation: fadeIn 0.5s forwards;
-}
-
 .past-experience_item_icon svg {
 	position: relative;
 	width: 40px;

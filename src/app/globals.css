@@ -9,16 +9,6 @@
 	--image-filter: none;
 }
 
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
 * {
 	transition-property: color, background-color, border-color;
 	transition-duration: 0.25s;
@@ -26,18 +16,12 @@
 }
 
 
-.fade-in-animation {
-	transition-timing-function: ease;
-	animation: 1s fadeIn forwards;
-}
-
 div {
 	color: var(--text-color);
 	line-height: 1.5;
 }
 
 body {
-	max-width: 1000px;
 	padding: 20px 15px 25px 15px;
 }
 

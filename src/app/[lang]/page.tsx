@@ -57,7 +57,7 @@ export default function Page({ params }: PageInnerProps) {
         </div>
         <HeaderTypography text={translate("about_me")} />
         <div
-          className="mb-5 about-me text-base text-text-color-lighter"
+          className="mb-5 animate-fadeIn-slow delay-300 text-base text-text-color-lighter"
           style={{ maxWidth: 400 }}
         >
           {translate("about_me_content")}
@@ -65,31 +65,31 @@ export default function Page({ params }: PageInnerProps) {
         <div className={"header mb-4 font-bold"}>{translate("skills")}</div>
         <div className="text-base text-text-color-lighter grid grid-cols-2 sm:flex-row">
           <ul className="m0 p-0">
-            <li className="skills_item list-none my-1 mb-1 opacity-0">Javascript</li>
-            <li className="skills_item list-none my-1 mb-1 opacity-0">Typescript</li>
-            <li className="skills_item list-none my-1 mb-1 opacity-0">Reactjs</li>
-            <li className="skills_item list-none my-1 mb-1 opacity-0">HTML / CSS</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Javascript</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Typescript</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Reactjs</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">HTML / CSS</li>
           </ul>
           <ul className="p-0">
-            <li className="skills_item list-none my-1 mb-1 opacity-0">ReduxToolkit</li>
-            <li className="skills_item list-none my-1 mb-1 opacity-0">Next.js</li>
-            <li className="skills_item list-none my-1 mb-1 opacity-0">Webpack</li>
-            <li className="skills_item list-none my-1 mb-1 opacity-0">Git</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">ReduxToolkit</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Next.js</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Webpack</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Git</li>
           </ul>
           <ul className="p-0">
-            <li className="skills_item list-none my-1 mb-1 opacity-0">Tailwind CSS</li>
-            <li className="skills_item list-none my-1 mb-1 opacity-0">NodeJS</li>
-            <li className="skills_item list-none my-1 mb-1 opacity-0">Scrum</li>
-            <li className="skills_item list-none my-1 mb-1 opacity-0">Software Development</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Tailwind CSS</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">NodeJS</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Scrum</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Software Development</li>
           </ul>
           <ul className="p-0">
-            <li className="skills_item list-none my-1 mb-1 opacity-0">Lerna</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Lerna</li>
           </ul>
         </div>
       </section>
       <section className={"flex-1 mb-5"}>
         <HeaderTypography text={translate("past_experiences")} />
-        <div className="opacity-0 mb-5 fade-in-animation">
+        <div className="opacity-0 mb-5 animate-fadeIn-slow">
           <PastExperienceItem
             id="chargoon"
             icon={<ChargoonIcon />}

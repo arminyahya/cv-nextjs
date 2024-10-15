@@ -27,8 +27,8 @@ export default function Header({ }: HeaderProps) {
 	const switchLang = () => {
 		const nextLanguage = lang === 'en' ? 'fa' : 'en';
 		const body = document.querySelector('body');
-		body?.classList.remove('fade-in-animation');
-		body?.classList.add('fade-in-animation');
+		body?.classList.remove('animate-fadeIn-slow');
+		body?.classList.add('animate-fadeIn-slow');
 		router.push(nextLanguage)
 	}
 
