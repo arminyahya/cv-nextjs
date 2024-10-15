@@ -42,19 +42,6 @@ body {
 }
 
 
-.header {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	margin-bottom: 8px;
-}
-
-.header_item {
-	display: inline-block;
-	margin: 0px 5px;
-
-}
-
 .header_item * {
 	transition: none;
 }
@@ -69,20 +56,6 @@ ul {
 
 li {
 	margin: 4px 0px;
-}
-
-.footer {
-	display: flex;
-	align-items: center;
-	border-top: 1px solid var(--text-color-lighter);
-	margin-right: auto;
-	width: 100%;
-	padding: 10px 0px;
-}
-
-.footer_item {
-	display: inline-block;
-	margin: 0px 10px;
 }
 
 .footer svg {

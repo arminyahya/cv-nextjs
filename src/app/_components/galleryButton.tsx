@@ -64,7 +64,7 @@ export default function GalleryButton({
 
   const router = useRouter();
   return (
-    <div className="gallery-button">
+    <div className="inline-block text-text-color underline cursor-pointer">
       <Modal
         isOpen={isModalOpen}
         onClose={() => {

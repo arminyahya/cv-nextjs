@@ -36,9 +36,9 @@ export function generateStaticParams() {
 export default function Page({ params }: PageInnerProps) {
   const { translate } = useTranslation(params.lang);
   return (
-    <main className={`main`}>
-      <section className={"main-section"}>
-        <div className="profile-image_wrapper margin-bottom">
+    <main className={`main flex flex-col`}>
+      <section className={"flex-1 mb-5"}>
+        <div className="profile-image_wrapper mb-5 relative w-full h-56 filter-image-filter">
           <Image
             alt="armin-yahya"
             src={`${basePath}/profile-image-3.jpg`}
@@ -47,9 +47,9 @@ export default function Page({ params }: PageInnerProps) {
             objectFit="contain"
           />
         </div>
-        <div className="full-name">{translate("fullname")}</div>
-        <div className="role">{translate("role")}</div>
-        <div className="personal-info">
+        <div className="full-name font-bold text-2xl">{translate("fullname")}</div>
+        <div className="role text-xl mb-5">{translate("role")}</div>
+        <div className="personal-info text-xl mb-6">
           <PersonalInfoItem label={translate("birthDate")} value={translate("birthDateValue")} />
           <PersonalInfoItem label={translate("location")} value={translate("tehran")} />
           <PersonalInfoItem label={translate("militaryService")} value={translate("finished")} />
@@ -57,39 +57,39 @@ export default function Page({ params }: PageInnerProps) {
         </div>
         <HeaderTypography text={translate("about_me")} />
         <div
-          className="topic-inner-text margin-bottom about-me"
+          className="mb-5 about-me text-base text-text-color-lighter"
           style={{ maxWidth: 400 }}
         >
           {translate("about_me_content")}
         </div>
         <div className={"header"}>{translate("skills")}</div>
-        <div className="topic-inner-text skills_inner">
-          <ul>
-            <li className="skills_item">Javascript</li>
-            <li className="skills_item">Typescript</li>
-            <li className="skills_item">Reactjs</li>
-            <li className="skills_item">HTML / CSS</li>
+        <div className="text-base text-text-color-lighter grid grid-cols-2">
+          <ul className="p-0">
+            <li className="skills_item list-none mb-3 opacity-0">Javascript</li>
+            <li className="skills_item list-none mb-3 opacity-0">Typescript</li>
+            <li className="skills_item list-none mb-3 opacity-0">Reactjs</li>
+            <li className="skills_item list-none mb-3 opacity-0">HTML / CSS</li>
           </ul>
-          <ul>
-            <li className="skills_item">ReduxToolkit</li>
-            <li className="skills_item">Next.js</li>
-            <li className="skills_item">Webpack</li>
-            <li className="skills_item">Git</li>
+          <ul className="p-0">
+            <li className="skills_item list-none mb-3 opacity-0">ReduxToolkit</li>
+            <li className="skills_item list-none mb-3 opacity-0">Next.js</li>
+            <li className="skills_item list-none mb-3 opacity-0">Webpack</li>
+            <li className="skills_item list-none mb-3 opacity-0">Git</li>
           </ul>
-          <ul>
-            <li className="skills_item">Tailwind CSS</li>
-            <li className="skills_item">NodeJS</li>
-            <li className="skills_item">Scrum</li>
-            <li className="skills_item">Software Development</li>
+          <ul className="p-0">
+            <li className="skills_item list-none mb-3 opacity-0">Tailwind CSS</li>
+            <li className="skills_item list-none mb-3 opacity-0">NodeJS</li>
+            <li className="skills_item list-none mb-3 opacity-0">Scrum</li>
+            <li className="skills_item list-none mb-3 opacity-0">Software Development</li>
           </ul>
-          <ul>
-            <li className="skills_item">Lerna</li>
+          <ul className="p-0">
+            <li className="skills_item list-none mb-3 opacity-0">Lerna</li>
           </ul>
         </div>
       </section>
-      <section className={"main-section work-experiences"}>
+      <section className={"flex-1 mb-5"}>
         <HeaderTypography text={translate("past_experiences")} />
-        <div className="past-experience fade-in-animation">
+        <div className="opacity-0 mb-5 fade-in-animation">
           <PastExperienceItem
             id="chargoon"
             icon={<ChargoonIcon />}
@@ -121,7 +121,7 @@ export default function Page({ params }: PageInnerProps) {
               { type: 'video', src: "/chargoon-9.mp4" , description: translate("gallery_chargoon_output_video")},
 
             ]}
-            className={"margin-bottom-2x"}
+            className={"mb-5-2x"}
           />
           <PastExperienceItem
             id="yeganeh_soft"
@@ -142,7 +142,7 @@ export default function Page({ params }: PageInnerProps) {
               { type: 'image', src: "/yeganeh-5.jpg", description: translate("gallery_yeganeh_edms_orgchart") },
               { type: 'image', src: "/yeganeh-6.jpg", description: translate("gallery_yeganeh_edms_documentgroup") },
             ]}
-            className={"margin-bottom-2x"}
+            className={"mb-5-2x"}
             noDescription={true}
           />
         </div>
