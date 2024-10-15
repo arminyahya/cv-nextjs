@@ -12,6 +12,13 @@ const config: Config = {
         "text-color-lighter": "var(--text-color-lighter)",
         "image-filter": "var(--image-filter)",
 
+      },
+      extend: {
+        // Add rtl variant
+        textAlign: ['rtl'],
+        float: ['rtl'],
+        padding: ['rtl'],
+        margin: ['rtl'],
       }
     },
   },

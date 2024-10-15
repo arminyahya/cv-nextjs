@@ -36,9 +36,9 @@ export function generateStaticParams() {
 export default function Page({ params }: PageInnerProps) {
   const { translate } = useTranslation(params.lang);
   return (
-    <main className={`main flex flex-col`}>
+    <main className={`main flex flex-col sm:flex-row`}>
       <section className={"flex-1 mb-5"}>
-        <div className="profile-image_wrapper mb-5 relative w-full h-56 filter-image-filter">
+        <div className="profile-image_wrapper mb-5 relative w-full h-56 filter-image-filter sm:w-56">
           <Image
             alt="armin-yahya"
             src={`${basePath}/profile-image-3.jpg`}
@@ -62,28 +62,28 @@ export default function Page({ params }: PageInnerProps) {
         >
           {translate("about_me_content")}
         </div>
-        <div className={"header"}>{translate("skills")}</div>
-        <div className="text-base text-text-color-lighter grid grid-cols-2">
-          <ul className="p-0">
-            <li className="skills_item list-none mb-3 opacity-0">Javascript</li>
-            <li className="skills_item list-none mb-3 opacity-0">Typescript</li>
-            <li className="skills_item list-none mb-3 opacity-0">Reactjs</li>
-            <li className="skills_item list-none mb-3 opacity-0">HTML / CSS</li>
+        <div className={"header mb-4 font-bold"}>{translate("skills")}</div>
+        <div className="text-base text-text-color-lighter grid grid-cols-2 sm:flex-row">
+          <ul className="m0 p-0">
+            <li className="skills_item list-none my-1 mb-1 opacity-0">Javascript</li>
+            <li className="skills_item list-none my-1 mb-1 opacity-0">Typescript</li>
+            <li className="skills_item list-none my-1 mb-1 opacity-0">Reactjs</li>
+            <li className="skills_item list-none my-1 mb-1 opacity-0">HTML / CSS</li>
           </ul>
           <ul className="p-0">
-            <li className="skills_item list-none mb-3 opacity-0">ReduxToolkit</li>
-            <li className="skills_item list-none mb-3 opacity-0">Next.js</li>
-            <li className="skills_item list-none mb-3 opacity-0">Webpack</li>
-            <li className="skills_item list-none mb-3 opacity-0">Git</li>
+            <li className="skills_item list-none my-1 mb-1 opacity-0">ReduxToolkit</li>
+            <li className="skills_item list-none my-1 mb-1 opacity-0">Next.js</li>
+            <li className="skills_item list-none my-1 mb-1 opacity-0">Webpack</li>
+            <li className="skills_item list-none my-1 mb-1 opacity-0">Git</li>
           </ul>
           <ul className="p-0">
-            <li className="skills_item list-none mb-3 opacity-0">Tailwind CSS</li>
-            <li className="skills_item list-none mb-3 opacity-0">NodeJS</li>
-            <li className="skills_item list-none mb-3 opacity-0">Scrum</li>
-            <li className="skills_item list-none mb-3 opacity-0">Software Development</li>
+            <li className="skills_item list-none my-1 mb-1 opacity-0">Tailwind CSS</li>
+            <li className="skills_item list-none my-1 mb-1 opacity-0">NodeJS</li>
+            <li className="skills_item list-none my-1 mb-1 opacity-0">Scrum</li>
+            <li className="skills_item list-none my-1 mb-1 opacity-0">Software Development</li>
           </ul>
           <ul className="p-0">
-            <li className="skills_item list-none mb-3 opacity-0">Lerna</li>
+            <li className="skills_item list-none my-1 mb-1 opacity-0">Lerna</li>
           </ul>
         </div>
       </section>
@@ -110,15 +110,15 @@ export default function Page({ params }: PageInnerProps) {
 
             ]}
             items={[
-              { type: 'image', src: "/chargoon-1.png" , description: translate("gallery_chargoon_modeler")},
-              { type: 'image', src: "/chargoon-2.png" , description: translate("gallery_chargoon_designer")},
-              { type: 'image', src: "/chargoon-3.png" , description: translate("gallery_chargoon_designer_setting")},
-              { type: 'image', src: "/chargoon-4.png" , description: translate("gallery_chargoon_output")},
-              { type: 'image', src: "/chargoon-5.png" , description: translate("gallery_chargoon_designer_new_fields")},
-              { type: 'image', src: "/chargoon-6.png" , description: translate("gallery_chargoon_complex_validation_tab")},
-              { type: 'image', src: "/chargoon-7.png" , description: translate("gallery_chargoon_design_complex_validation")},
-              { type: 'image', src: "/chargoon-8.png" , description: translate("gallery_chargoon_design_operation_on_events")},
-              { type: 'video', src: "/chargoon-9.mp4" , description: translate("gallery_chargoon_output_video")},
+              { type: 'image', src: "/chargoon-1.png", description: translate("gallery_chargoon_modeler") },
+              { type: 'image', src: "/chargoon-2.png", description: translate("gallery_chargoon_designer") },
+              { type: 'image', src: "/chargoon-3.png", description: translate("gallery_chargoon_designer_setting") },
+              { type: 'image', src: "/chargoon-4.png", description: translate("gallery_chargoon_output") },
+              { type: 'image', src: "/chargoon-5.png", description: translate("gallery_chargoon_designer_new_fields") },
+              { type: 'image', src: "/chargoon-6.png", description: translate("gallery_chargoon_complex_validation_tab") },
+              { type: 'image', src: "/chargoon-7.png", description: translate("gallery_chargoon_design_complex_validation") },
+              { type: 'image', src: "/chargoon-8.png", description: translate("gallery_chargoon_design_operation_on_events") },
+              { type: 'video', src: "/chargoon-9.mp4", description: translate("gallery_chargoon_output_video") },
 
             ]}
             className={"mb-5-2x"}
