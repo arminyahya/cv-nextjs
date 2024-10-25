@@ -4,7 +4,7 @@ const FA_Dictionary: dictionary = {
   fullname: "آرمین یحیی",
   role: "Frontend Developer",
   about_me: "درباره من",
-  about_me_content: `خوش شانس بودم که تونستم از ابتدا با افراد باتجربه کار کنم و ازشون یاد بگیرم. مسئولیت پذیر هستم و توی دیباگ کردن خوبم. `,
+  about_me_content: `خوش شانس بودم که تونستم از ابتدا با افراد باتجربه کار کنم و ازشون یاد بگیرم. مسئولیت پذیر و پرتلاش هستم. `,
   skills: "مهارت‌ها",
   skills_content: "",
   past_experiences: "سوابق کاری",
