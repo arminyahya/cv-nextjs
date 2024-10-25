@@ -4,7 +4,7 @@ const EN_Dictionary: dictionary = {
 	fullname: 'Armin Yahya',
 	role: 'Frontend Developer',
 	about_me: 'About me',
-	about_me_content: `I was fortunate to be able to work with experienced individuals from the beginning and learn from them. I am responsible and good at debugging.`,
+	about_me_content: `I was fortunate to be able to work with experienced individuals from the beginning and learn from them. I am a responsible and hardworking professional dedicated to delivering high-quality results.`,
 	skills: 'Skills',
 	past_experiences: 'Past experience',
 	chargoon: 'Chargoon',
