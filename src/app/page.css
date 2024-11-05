@@ -350,6 +350,10 @@ html[dir="ltr"] .next-button {
 	.gallery-button.for-print-only {
 		display: inline-block;
 	}
+
+	.work-experiences {
+		flex-grow: 2;
+	}
 }
 
 .company-tasks {

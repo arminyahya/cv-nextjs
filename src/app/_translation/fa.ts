@@ -4,7 +4,7 @@ const FA_Dictionary: dictionary = {
   fullname: "آرمین یحیی",
   role: "Frontend Developer",
   about_me: "درباره من",
-  about_me_content: `خوش شانس بودم که تونستم از ابتدا با افراد باتجربه کار کنم و ازشون یاد بگیرم. مسئولیت پذیر و پرتلاش هستم. `,
+  about_me_content: `خوش شانس بودم که تونستم از ابتدا با افراد باتجربه کار کنم و ازشون یاد بگیرم. مسئولیت پذیر و پرتلاش هستم و همیشه سعی میکنم کارهایی با کیفیت بالا ارائه بدم. `,
   skills: "مهارت‌ها",
   skills_content: "",
   past_experiences: "سوابق کاری",
@@ -50,7 +50,7 @@ const FA_Dictionary: dictionary = {
     "به عنوان یک Frontend Developer با همکار بخش UI/UX تعامل داشتم تا صفحات به شکل مورد تایید پیاده سازی بشن.",
   "Participated in creating both a Document Manager and EDMS Software, both of which are web-based":
     "در تولید دو نرم افزار دبیرخانه و مدیریت اسناد نقش داشتم.",
-    "I collaborated on migrating to the new major versions of packages such as React, TypeScript, Webpack, and others": "من و سایر اعضای تیم ورژن پکیج هایی مثل React ، Typescript و Webpack رو بروز میکردیم تا بتونیم از قابلیت‌های جدیدشون استفاده کنیم. همچنین تغییراتی که توی Migation Guide توضیح میدادن رو در پروژه‌ها اعمال میکردیم.",
+    "I collaborated on migrating to the new major versions of packages such as React, TypeScript, Webpack, and others": "من و سایر اعضای تیم ورژن پکیج هایی مثل React ، Typescript و Webpack رو بروز میکردیم تا بتونیم از قابلیت‌های جدیدشون استفاده کنیم. همچنین تغییراتی که توی Migration Guide توضیح میدادن رو در پروژه‌ها اعمال میکردیم.",
     "2024September": "شهریور ۱۴۰۳",
     gallery_chargoon_modeler: "توضیحات مربوط به فرم ساز پیشرفته: میخوایم از داخل برنامه یدونه فرم طراحی کنیم. این فرم مربوط به دانش آموزای یک مدرسه هست. قدم اول طراحی فرممون میشه طراحی مدل اطلاعاتی چون بالاخره باید اطلاعات مربوط به دانش آموز، کلاس و سابقه تحصیلی رو یجا ذخیره کنیم دیگه. جداول و رابطه هایی که داخل صفحه میبینید با استفاده از کتابخانه gojs پیاده سازی شدند.",
     gallery_chargoon_designer: "این صفحه که طراحی فرم نام داره جاییه که چیدمان فرم و اینکه کدوم فیلدا اجباری هستند تنظیم میشه. همچنین میتونید برای نمایش یا ویرایش فیلد ویجت های مختلف انتخاب کنید.",
