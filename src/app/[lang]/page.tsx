@@ -87,7 +87,7 @@ export default function Page({ params }: PageInnerProps) {
           </ul>
         </div>
       </section>
-      <section className={"main-section "}>
+      <section className={"main-section work-experiences"}>
         <HeaderTypography text={translate("past_experiences")} />
         <div className="past-experience fade-in-animation">
           <PastExperienceItem
@@ -104,7 +104,6 @@ export default function Page({ params }: PageInnerProps) {
               translate("Helped new Infrastructure team members get familiar with the codebase"),
               translate("Created a simple form generator for software that doesn’t need a complex form designer"),
               translate("As a member of the infrastructure team, I successfully resolved issues that were reported by other teams"),
-              translate("I also introduced a new tool for generating TypeScript from C# models"),
               translate("I refactored LESS styles to utilize CSS variables for theming"),
               translate("I improved the performance of certain components (such as the tree) to handle large amounts of data more efficiently"),
               translate("I collaborated on migrating to the new major versions of packages such as React, TypeScript, Webpack, and others"),
