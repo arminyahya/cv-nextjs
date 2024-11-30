@@ -33,12 +33,13 @@ export function generateStaticParams() {
     { lang: 'en' },
   ]
 }
+
 export default function Page({ params }: PageInnerProps) {
   const { translate } = useTranslation(params.lang);
   return (
-    <main className={`main flex flex-col sm:flex-row`}>
+    <main className={`flex flex-col print:flex-row sm:flex-row`}>
       <section className={"flex-1 mb-5"}>
-        <div className="profile-image_wrapper mb-5 relative w-full h-56 filter-image-filter sm:w-56">
+        <div className="mb-5 relative w-full h-56 filter-image-filter print:w-[220px] print:mw-[220px] sm:w-56">
           <Image
             alt="armin-yahya"
             src={`${basePath}/profile-image-3.jpg`}
@@ -62,7 +63,7 @@ export default function Page({ params }: PageInnerProps) {
         >
           {translate("about_me_content")}
         </div>
-        <div className={"header mb-4 font-bold"}>{translate("skills")}</div>
+        <div className={"mb-4 font-bold"}>{translate("skills")}</div>
         <div className="text-base text-text-color-lighter grid grid-cols-2 sm:flex-row">
           <ul className="m0 p-0">
             <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Javascript</li>
@@ -87,7 +88,7 @@ export default function Page({ params }: PageInnerProps) {
           </ul>
         </div>
       </section>
-      <section className={"flex-1 mb-5"}>
+      <section className={"flex-1 mb-5 print:flex-grow-[2]"}>
         <HeaderTypography text={translate("past_experiences")} />
         <div className="opacity-0 mb-5 animate-fadeIn-slow">
           <PastExperienceItem

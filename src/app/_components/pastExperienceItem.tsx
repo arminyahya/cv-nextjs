@@ -53,7 +53,7 @@ export default function PastExperienceItem({
               <li className="list-none">• {task}</li>
             ))}
           </ul>
-          <Link className="inline-block text-text-color underline cursor-pointer for-print-only" href={`https://arminyahya.github.io/cv-nextjs/${lang || "fa"}?${id}-slideshow=open`}>
+          <Link className="hidden text-text-color underline cursor-pointer print:inline-block" href={`https://arminyahya.github.io/cv-nextjs/${lang || "fa"}?${id}-slideshow=open`}>
             {translate("see_gallery")}
           </Link>
           <Suspense>
