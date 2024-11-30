@@ -4,9 +4,9 @@ import { useState } from 'react'
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
 import { ZoomIn, ZoomOut, Move, X } from 'lucide-react'
 import { useParams } from 'next/navigation'
-import useTranslation from '../../_translation/useTranslation'
+import useTranslation from '../../translation/useTranslation'
 import './slider.style.css'
-import { basePath } from '@/app/constant'
+import { basePath } from '@/constant'
 
 export interface SliderItem {
   type: 'image' | 'video';

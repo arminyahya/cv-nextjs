@@ -1,6 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import useTranslation from "../_translation/useTranslation";
+import useTranslation from "../translation/useTranslation";
 import {
   useParams,
   usePathname,

@@ -4,7 +4,7 @@ import GalleryButton from "./galleryButton";
 import { SliderItem } from "./slider";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import useTranslation from "../_translation/useTranslation";
+import useTranslation from "../translation/useTranslation";
 
 type PastExperienceItemProps = {
   id: string;
