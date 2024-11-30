@@ -43,7 +43,7 @@ export default function PastExperienceItem({
       <div>
         <div className="text-xs mb-2">
           {companyName}
-          <div className="small-horizontal-line"></div>
+          <div className="inline-block w-4 h-[1px] my-0 mx-1 border-t border-solid border-text-color-lighter align-middle opacity-50"></div>
           {startDate} / {endDate}
         </div>
         <div className="text-base mb-2">{role}</div>
