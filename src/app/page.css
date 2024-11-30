@@ -13,16 +13,6 @@ body.ReactModal__Body--open {
 	max-width: 100%;
 }
 
-.small-horizontal-line {
-	display: inline-block;
-	width: 16px;
-	height: 1px;
-	margin: 0px 5px;
-	border-top: 1px solid var(--text-color-lighter);
-	vertical-align: middle;
-	opacity: 0.5;
-}
-
 @media print {
 	.main {
 		flex-direction: row;
