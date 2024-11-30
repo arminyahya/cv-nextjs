@@ -50,7 +50,7 @@ export default function PastExperienceItem({
         <div className="text-base text-text-color-lighter">
           <ul className="p-0">
             {companyTasks.map((task) => (
-              <li className="list-none">• {task}</li>
+              <li className="list-none my-1">• {task}</li>
             ))}
           </ul>
           <Link className="hidden text-text-color underline cursor-pointer print:inline-block" href={`https://arminyahya.github.io/cv-nextjs/${lang || "fa"}?${id}-slideshow=open`}>
