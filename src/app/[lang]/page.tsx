@@ -1,12 +1,12 @@
 import Image from "next/image";
 import "../page.css";
-import useTranslation from "../_translation/useTranslation";
+import useTranslation from "@/translation/useTranslation";
 import YeganehIcon from "@/Icons/yeganeh";
 import ChargoonIcon from "@/Icons/chargoon";
-import PersonalInfoItem from "../_components/personalInfoItem";
-import { basePath } from "../constant";
-import PastExperienceItem from "../_components/pastExperienceItem";
-import HeaderTypography from "../_components/headerTypography";
+import PersonalInfoItem from "@/components/personalInfoItem";
+import { basePath } from "@/constant";
+import PastExperienceItem from "@/components/pastExperienceItem";
+import HeaderTypography from "@/components/headerTypography";
 import { Metadata, Viewport } from "next";
 
 type PageInnerProps = {

@@ -2,9 +2,9 @@
 import localFont from "next/font/local";
 
 import "./globals.css";
-import Header from "./_components/header";
+import Header from "@/components/header";
 import AppContext from "@/appContext";
-import Footer from "./_components/footer";
+import Footer from "@/components/footer";
 import { useParams } from "next/navigation";
 
 const openSans = localFont({ src: "../../public/OpenSans.ttf" });
