@@ -9,18 +9,18 @@ type FooterProps = {};
 
 export default function Footer({}: FooterProps) {
   return (
-    <div className="footer">
-      <div className="footer_item">
+    <footer className="flex items-center border-t border-solid border-text-color-lighter w-full py-2">
+      <div className="inline-block mx-2 ms-0">
         <Link href="https://github.com/arminyahya" passHref={true}>
           <GithubIcon />
         </Link>
       </div>
-      <div className="footer_item">
+      <div className="inline-block mx-2">
         <Link href="https://www.linkedin.com/in/arminyahya/" passHref={true}>
           <LinkedinIcon />
         </Link>
       </div>
-      <div className="footer_item">
+      <div className="inline-block mx-2">
         <Link
           href="https://stackoverflow.com/users/9354934/armin-yahya"
           passHref={true}
@@ -28,6 +28,6 @@ export default function Footer({}: FooterProps) {
           <StackoverflowIcon />
         </Link>
       </div>
-    </div>
+    </footer>
   );
 }

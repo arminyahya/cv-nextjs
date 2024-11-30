@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./_components/header";
 import AppContext from "@/appContext";
-import { useEffect, useState } from "react";
 import Footer from "./_components/footer";
 import { useParams } from "next/navigation";
 
@@ -16,18 +15,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-	const {lang} = useParams();
-	
+  const { lang } = useParams();
   return (
     <html dir={lang === "en" ? "ltr" : "rtl"} lang={lang as "en" | "fa"}>
       <body
         className={
-          lang === "en" ? openSans.className : iranYekan.className
+          (lang === "en" ? openSans.className : iranYekan.className) + ' relative my-0 mx-auto w-full bg-background-color max-w-[1000px]'
         }
       >
-          <Header  />
-          {children}
-					<Footer />
+        <Header />
+        {children}
+        <Footer />
         <div id="portal-modal"></div>
       </body>
     </html>

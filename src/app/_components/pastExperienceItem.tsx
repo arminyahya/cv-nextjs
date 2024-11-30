@@ -36,24 +36,24 @@ export default function PastExperienceItem({
   const { translate } = useTranslation(lang as "fa" | "en");
 
   return (
-    <div className={`past-experience_item ${className}`}>
-      <div className="past-experience_item_icon_wrapper">
+    <div className={`flex mb-10 ${className}`}>
+      <div className="w-14 me-3">
         <div className="past-experience_item_icon">{icon}</div>
       </div>
-      <div className="past-experience_item_detail">
-        <div className="past-experience_item_detail_date">
+      <div>
+        <div className="text-xs mb-2">
           {companyName}
-          <div className="small-horizontal-line"></div>
+          <div className="inline-block w-4 h-[1px] my-0 mx-1 border-t border-solid border-text-color-lighter align-middle opacity-50"></div>
           {startDate} / {endDate}
         </div>
-        <div className="past-experience_item_detail_role">{role}</div>
-        <div className="past-experience_item_detail_activity">
-          <ul className="company-tasks">
+        <div className="text-base mb-2">{role}</div>
+        <div className="text-base text-text-color-lighter">
+          <ul className="p-0">
             {companyTasks.map((task) => (
-              <li className="company-tasks_item">• {task}</li>
+              <li className="list-none my-1">• {task}</li>
             ))}
           </ul>
-          <Link className="gallery-button for-print-only" href={`https://arminyahya.github.io/cv-nextjs/${lang || "fa"}?${id}-slideshow=open`}>
+          <Link className="hidden text-text-color underline cursor-pointer print:inline-block" href={`https://arminyahya.github.io/cv-nextjs/${lang || "fa"}?${id}-slideshow=open`}>
             {translate("see_gallery")}
           </Link>
           <Suspense>

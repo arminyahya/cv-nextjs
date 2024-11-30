@@ -27,19 +27,19 @@ export default function Header({ }: HeaderProps) {
 	const switchLang = () => {
 		const nextLanguage = lang === 'en' ? 'fa' : 'en';
 		const body = document.querySelector('body');
-		body?.classList.remove('fade-in-animation');
-		body?.classList.add('fade-in-animation');
+		body?.classList.remove('animate-fadeIn-slow');
+		body?.classList.add('animate-fadeIn-slow');
 		router.push(nextLanguage)
 	}
 
 	return (
-		<div className="header">
-			<div className="header_item" onClick={switchTheme}>
+		<header className="flex justify-end items-center mb-4 print:hidden md:mb-2">
+			<div className="header_item inline-block mx-2" onClick={switchTheme}>
 				{currentTheme === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
 			</div>
-			<div className="header_item" onClick={switchLang} >
+			<div className="header_item inline-block mx-1" onClick={switchLang} >
 				<MultiLangIcon />
 			</div>
-		</div>
+		</header>
 	)
 }
