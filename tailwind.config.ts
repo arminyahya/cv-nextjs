@@ -10,8 +10,6 @@ const config: Config = {
         "background-color": "var(--background-color)",
         "text-color": "var(--text-color)",
         "text-color-lighter": "var(--text-color-lighter)",
-        "image-filter": "var(--image-filter)",
-
       },
       animation: {
         'fadeIn-slow': 'fadeIn 1s ease forwards',
