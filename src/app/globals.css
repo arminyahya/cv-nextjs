@@ -26,30 +26,24 @@ body {
 }
 
 
-.header_item * {
+header * {
 	transition: none;
 }
 
-.header_item svg {
+header svg {
 	vertical-align: middle;
 }
 
-.footer svg {
+footer svg {
 	width: 28px;
 	height: 28px;
 	opacity: 0.7;
 }
 
-.footer svg * {
+footer svg * {
 	fill: var(--text-color);
 }
 
-.footer svg:hover {
+footer svg:hover {
 	opacity: 1;
-}
-
-.footer_item:first-child {
-	margin-right: 0px;
-	margin-left: 10px;
-
 }
