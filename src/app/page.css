@@ -4,36 +4,9 @@
 	height: 40px;
 }
 
-.for-print-only {
-	display: none;
-}
-
 body.ReactModal__Body--open {
 	overflow: hidden;
 	max-width: 100%;
-}
-
-@media print {
-	.main {
-		flex-direction: row;
-	}
-	
-  	.gallery-button, .header  {
-  	  display: none;
-  	}
-
-	.profile-image_wrapper {
-		width: 220px;
-		max-width: 220px;
-	}
-
-	.skills_inner {
-		flex-direction: row;
-	}
-
-	.gallery-button.for-print-only {
-		display: inline-block;
-	}
 }
 
 @media only screen and (min-width: 600px){
