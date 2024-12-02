@@ -71,7 +71,7 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
                   <div className="media-container">
                     {!isMediaLoaded && (
                       <div className="media-placeholder">
-                        {translate("loading")}
+                        <span>{translate("loading")}</span>
                       </div>
                     )}
                     {currentItem.type === 'image' ? (
