@@ -33,10 +33,10 @@ export default function Header({ }: HeaderProps) {
 
 	return (
 		<header className="flex justify-end items-center mb-4 print:hidden md:mb-2">
-			<div className="header_item inline-block mx-2" onClick={switchTheme}>
+			<div className="inline-block mx-2 cursor-pointer" onClick={switchTheme}>
 				{currentTheme === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
 			</div>
-			<div className="header_item inline-block mx-1" onClick={switchLang} >
+			<div className="inline-block mx-1 cursor-pointer" onClick={switchLang} >
 				<MultiLangIcon />
 			</div>
 		</header>
