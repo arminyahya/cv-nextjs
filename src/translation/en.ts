@@ -42,6 +42,13 @@ const EN_Dictionary: dictionary = {
     gallery_yeganeh_old_dabirkhone_add_letter: `This is the form related to adding a letter, which has been implemented using the Ant Design library. This application was the initial version of the unique company’s secretariat, which was later replaced with a new design.`,
     gallery_yeganeh_edms_orgchart: `This image relates to the display of organizational positions in the document management software.`,
     gallery_yeganeh_edms_documentgroup: `This is the data entry form for one of the entities in the document software.`,
+	now: 'Now',
+	'2024December': '2024 December',
+	flytodayCompanyTask1: "Contributing to a Next.js project with a large and growing user base",
+	flytodayCompanyTask2: "Developing a smart and dynamic Tour component to fit within the company's codebase",
+	flytodayCompanyTask3: "Maintaining components to ensure compatibility across various devices",
+	flytodayCompanyTask4: "Optimizing components and imported modules to enhance site performance and reduce load time",
+	gallery_flytoday_tour: "This is the Tour component I developed. It can adjust its position from the bottom to other areas if there is no available space below. Additionally, you can apply different styles to each step."
 };
 
 export default EN_Dictionary;

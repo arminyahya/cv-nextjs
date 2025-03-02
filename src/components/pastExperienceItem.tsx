@@ -11,7 +11,7 @@ type PastExperienceItemProps = {
   icon: React.JSX.Element;
   companyName: string;
   startDate: string;
-  endDate: string;
+  endDate?: string;
   role: string;
   companyTasks: string[];
   items: SliderItem[];
@@ -44,7 +44,7 @@ export default function PastExperienceItem({
         <div className="text-xs mb-2">
           {companyName}
           <div className="inline-block w-4 h-[1px] my-0 mx-1 border-t border-solid border-text-color-lighter align-middle opacity-50"></div>
-          {startDate} / {endDate}
+          {startDate} / {endDate ?? translate('now')}
         </div>
         <div className="text-base mb-2">{role}</div>
         <div className="text-base text-text-color-lighter">

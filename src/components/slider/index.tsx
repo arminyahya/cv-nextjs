@@ -38,6 +38,8 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
   }
 
   const currentItem = items[currentIndex]
+  const displayNavigationButtons = items.length > 1;
+  const displayNextButton = !!items[currentIndex + 1];
 
   return (
     <div className="responsive-slider">
@@ -104,10 +106,10 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
           <div className="info-content">
             {items[currentIndex].description}
           </div>
-          <div className="navigation-buttons">
+          {displayNavigationButtons && <div className="navigation-buttons">
             <button onClick={prevItem} className="nav-button">{translate('previous')}</button>
-            <button onClick={nextItem} className="nav-button">{translate('next')}</button>
-          </div>
+            {displayNextButton && <button onClick={nextItem} className="nav-button">{translate('next')}</button>}
+          </div>}
         </div>
       </div>
 
