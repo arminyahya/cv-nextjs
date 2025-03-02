@@ -65,6 +65,7 @@
   background-color: #e0e0e0;
   overflow: hidden;
   position: relative;
+  min-height: 200px;
 }
 
 .zoom-controls {

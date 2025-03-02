@@ -69,13 +69,14 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
                     <X size={24} />
                   </button>
                 </div>
+                {!isMediaLoaded && (
+                  <div className="media-placeholder">
+                    <span>{translate("loading")}</span>
+                  </div>
+                )}
                 <TransformComponent>
                   <div className="media-container">
-                    {!isMediaLoaded && (
-                      <div className="media-placeholder">
-                        <span>{translate("loading")}</span>
-                      </div>
-                    )}
+              
                     {currentItem.type === 'image' ? (
                       <img
                         src={`${basePath}${currentItem.src}`}
