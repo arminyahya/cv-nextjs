@@ -38,6 +38,8 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
   }
 
   const currentItem = items[currentIndex]
+  const displayNavigationButtons = items.length > 1;
+  const displayNextButton = !!items[currentIndex + 1];
 
   return (
     <div className="responsive-slider">
@@ -54,16 +56,16 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
             {({ zoomIn, zoomOut, resetTransform }) => (
               <>
                 <div className="zoom-controls">
-                  <button onClick={() => zoomIn()} className="zoom-button" aria-label="Zoom In">
+                  <button onClick={() => zoomIn()} className="zoom-button text-black" aria-label="Zoom In">
                     <ZoomIn size={24} />
                   </button>
-                  <button onClick={() => zoomOut()} className="zoom-button" aria-label="Zoom Out">
+                  <button onClick={() => zoomOut()} className="zoom-button text-black" aria-label="Zoom Out">
                     <ZoomOut size={24} />
                   </button>
-                  <button onClick={() => resetTransform()} className="zoom-button" aria-label="Reset Zoom">
+                  <button onClick={() => resetTransform()} className="zoom-button text-black" aria-label="Reset Zoom">
                     <Move size={24} />
                   </button>
-                  <button onClick={onClose} className="zoom-button" aria-label="Close Slider">
+                  <button onClick={onClose} className="zoom-button text-black" aria-label="Close Slider">
                     <X size={24} />
                   </button>
                 </div>
@@ -101,13 +103,13 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
 
         {/* Information Section */}
         <div className="info-section">
-          <div className="info-content">
+          <div className="info-content text-black">
             {items[currentIndex].description}
           </div>
-          <div className="navigation-buttons">
+          {displayNavigationButtons && <div className="navigation-buttons">
             <button onClick={prevItem} className="nav-button">{translate('previous')}</button>
-            <button onClick={nextItem} className="nav-button">{translate('next')}</button>
-          </div>
+            {displayNextButton && <button onClick={nextItem} className="nav-button">{translate('next')}</button>}
+          </div>}
         </div>
       </div>
 

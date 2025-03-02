@@ -8,6 +8,7 @@ import { basePath } from "@/constant";
 import PastExperienceItem from "@/components/pastExperienceItem";
 import HeaderTypography from "@/components/headerTypography";
 import { Metadata, Viewport } from "next";
+import FlytodayIcon from "@/Icons/flytoday";
 
 type PageInnerProps = {
   params: { lang: "fa" | "en" };
@@ -94,6 +95,23 @@ export default function Page({ params }: PageInnerProps) {
       <section className={"flex-1 mb-5 print:flex-grow-[2]"}>
         <HeaderTypography text={translate("past_experiences")} />
         <div className="opacity-0 mb-5 animate-fadeIn-slow">
+        <PastExperienceItem
+            id="flytoday"
+            icon={<FlytodayIcon />}
+            companyName={translate("Flytoday")}
+            startDate={translate("2024December")}
+            role={translate("role")}
+            companyTasks={[
+              translate("flytodayCompanyTask1"),
+              translate("flytodayCompanyTask2"),
+              translate("flytodayCompanyTask3"),
+              translate("flytodayCompanyTask4"),]}
+            items={[
+              { type: 'image', src: "/flytoday-1.png", description: translate("gallery_flytoday_tour") },
+            ]}
+            className={"mb-5-2x"}
+            noDescription={true}
+          />
           <PastExperienceItem
             id="chargoon"
             icon={<ChargoonIcon />}
