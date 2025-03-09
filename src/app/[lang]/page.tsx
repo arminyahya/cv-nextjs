@@ -36,12 +36,14 @@ export function generateStaticParams() {
 }
 
 export default function Page({ params }: PageInnerProps) {
+  const lang = params.lang;
+
   const { translate } = useTranslation(params.lang);
   return (
     <main className={`flex flex-col print:flex-row sm:flex-row`}>
       <section className={"flex-1 mb-5"}>
         <div
-          className="mb-5 relative w-full h-56 print:w-52 print:mw-52 md:w-56"
+          className="mb-5 relative w-full h-56 print:w-52 print:mw-52 md:w-56 print:hidden"
         >
           <Image
             alt="armin-yahya"
@@ -57,7 +59,6 @@ export default function Page({ params }: PageInnerProps) {
         <div className="personal-info text-xl mb-6">
           <PersonalInfoItem label={translate("birthDate")} value={translate("birthDateValue")} />
           <PersonalInfoItem label={translate("location")} value={translate("tehran")} />
-          <PersonalInfoItem label={translate("militaryService")} value={translate("finished")} />
           <PersonalInfoItem label={translate("email")} value={translate("arminyahyaa@gmail.com")} />
         </div>
         <HeaderTypography text={translate("about_me")} />
@@ -121,9 +122,9 @@ export default function Page({ params }: PageInnerProps) {
             role={translate("role")}
             companyTasks={[
               translate("As an infrastructure team member, I participate in migrating to Redux Toolkit from MobX"),
-              translate("I documented some projects on the knowledgebase to help other team members or company engineers"),
+              translate("chargoonCompanyTask2"),
               translate("Designed a diagram environment using the GoJS library to create database schemas"),
-              translate("Helped new Infrastructure team members get familiar with the codebase"),
+              translate("chargoonCompanyTask4"),
               translate("Created a simple form generator for software that doesn’t need a complex form designer"),
               translate("As a member of the infrastructure team, I successfully resolved issues that were reported by other teams"),
               translate("I refactored LESS styles to utilize CSS variables for theming"),
@@ -153,9 +154,9 @@ export default function Page({ params }: PageInnerProps) {
             endDate={translate("2020March")}
             role={translate("role")}
             companyTasks={[
-              translate("I familiarized myself with the Ant Design framework"),
-              translate("Collaborated closely with a UI designer as a frontend developer"),
-              translate("Participated in creating both a Document Manager and EDMS Software, both of which are web-based"),
+              translate("yeganehCompanyTask1"),
+              translate("yeganehCompanyTask2"),
+              translate("yeganehCompanyTask3")
             ]}
             items={[
               { type: 'image', src: "/yeganeh-1.jpg", description: translate("gallery_yeganeh_dabirkhone_orgchart") },
