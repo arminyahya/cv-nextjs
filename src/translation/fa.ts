@@ -28,11 +28,11 @@ const FA_Dictionary: dictionary = {
   email: "ایمیل",
   "As an infrastructure team member, I participate in migrating to Redux Toolkit from MobX":
     "به عنوان عضوی از تیم فرانت بخش زیرساخت در مهاجرت از mobx state management به redux نقش داشتم.",
-  "I documented some projects on the knowledgebase to help other team members or company engineers":
+  chargoonCompanyTask2:
     "تعدادی از پیاده سازی‌‌های انجام شده را مستند کردم و در اختیار بقیه توسعه دهنده‌های شرکت قرار دادم.",
   "Designed a diagram environment using the GoJS library to create database schemas":
     "یک محیط دیاگرامی با استفاده از کتابخانه gojs ایجاد کردم تا بتونیم از داخل برنامه data model طراحی کنیم.",
-  "Helped new Infrastructure team members get familiar with the codebase":
+  chargoonCompanyTask4:
     "به اعضای جدید تیم کمک میکردم تا با code base شرکت آشنا بشن.",
   "Created a simple form generator for software that doesn’t need a complex form designer":
     " یک فرم ساز ساده در کنار فرم ساز قبلی توسعه دادم تا نیاز تیم‌هایی که به فیچرهای پیچیده نیازی نداشتند تامین بشه.",
@@ -44,11 +44,11 @@ const FA_Dictionary: dictionary = {
     "استایل‌های LESS رو ریفکتور کردم تا برای them از css variables استفاده کنن.",
   "I improved the performance of certain components (such as the tree) to handle large amounts of data more efficiently":
     "بعضی از کامپوننت‌هارو (مثل درخت) تغییر دادم تا با اطلاعات ورودی زیاد هم performance خوبی داشته باشند.",
-  "I familiarized myself with the Ant Design framework":
+  yeganehCompanyTask1:
     "با کامپوننت‌های مختلف Ant Design آشنا شدم.",
-  "Collaborated closely with a UI designer as a frontend developer":
+  yeganehCompanyTask2:
     "به عنوان یک Frontend Developer با همکار بخش UI/UX تعامل داشتم تا صفحات به شکل مورد تایید پیاده سازی بشن.",
-  "Participated in creating both a Document Manager and EDMS Software, both of which are web-based":
+  yeganehCompanyTask3:
     "در تولید دو نرم افزار دبیرخانه و مدیریت اسناد نقش داشتم.",
     "I collaborated on migrating to the new major versions of packages such as React, TypeScript, Webpack, and others": "من و سایر اعضای تیم ورژن پکیج هایی مثل React ، Typescript و Webpack رو بروز میکردیم تا بتونیم از قابلیت‌های جدیدشون استفاده کنیم. همچنین تغییراتی که توی Migration Guide توضیح میدادن رو در پروژه‌ها اعمال میکردیم.",
     "2024September": "شهریور ۱۴۰۳",

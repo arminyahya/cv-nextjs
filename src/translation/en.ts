@@ -4,7 +4,7 @@ const EN_Dictionary: dictionary = {
 	fullname: 'Armin Yahya',
 	role: 'Frontend Developer',
 	about_me: 'About me',
-	about_me_content: `I was fortunate to be able to work with experienced individuals from the beginning and learn from them. I am a responsible and hardworking professional dedicated to delivering high-quality results.`,
+	about_me_content: `Frontend developer with a strong foundation in building responsive and user-friendly web applications. Passionate about writing clean, efficient code and continuously learning modern technologies. Dedicated to delivering high-quality results and collaborating with experienced teams to create seamless digital experiences.`,
 	skills: 'Skills',
 	past_experiences: 'Past experience',
 	chargoon: 'Chargoon',
@@ -44,11 +44,16 @@ const EN_Dictionary: dictionary = {
     gallery_yeganeh_edms_documentgroup: `This is the data entry form for one of the entities in the document software.`,
 	now: 'Now',
 	'2024December': '2024 December',
-	flytodayCompanyTask1: "Contributing to a Next.js project with a large and growing user base",
+	flytodayCompanyTask1: "Contributing to a Next.js project that has a large and expanding user base.",
 	flytodayCompanyTask2: "Developing a smart and dynamic Tour component to fit within the company's codebase",
 	flytodayCompanyTask3: "Maintaining components to ensure compatibility across various devices",
 	flytodayCompanyTask4: "Optimizing components and imported modules to enhance site performance and reduce load time",
-	gallery_flytoday_tour: "This is the Tour component I developed. It can adjust its position from the bottom to other areas if there is no available space below. Additionally, you can apply different styles to each step."
+	gallery_flytoday_tour: "This is the Tour component I developed. It can adjust its position from the bottom to other areas if there is no available space below. Additionally, you can apply different styles to each step.",
+	chargoonCompanyTask2: "Created and maintained technical documentation for projects in the knowledge base to support team members and company engineers, improving collaboration and knowledge sharing.",
+	chargoonCompanyTask4: "Assisted new Infrastructure team members in familiarizing themselves with the codebase.",
+	yeganehCompanyTask1: "Gained hands-on experience with the Ant Design framework, utilizing its component-based architecture to enhance UI development and improve user experience.",
+	yeganehCompanyTask2: "Worked closely with a UI designer to translate design concepts into responsive, user-friendly web interfaces, ensuring seamless frontend development and a cohesive user experience.",
+	yeganehCompanyTask3: "Contributed to the development of a web-based Document Manager and an Electronic Document Management System (EDMS), focusing on creating intuitive user interfaces and enhancing functionality."
 };
 
 export default EN_Dictionary;
