@@ -42,8 +42,8 @@ export default function Page({ params }: PageInnerProps) {
   return (
     <main className={`flex flex-col print:flex-row sm:flex-row`}>
       <section className={"flex-1 mb-5"}>
-        {lang === 'fa' && <div
-          className="mb-5 relative w-full h-56 print:w-52 print:mw-52 md:w-56"
+        <div
+          className="mb-5 relative w-full h-56 print:w-52 print:mw-52 md:w-56 print:hidden"
         >
           <Image
             alt="armin-yahya"
@@ -53,13 +53,12 @@ export default function Page({ params }: PageInnerProps) {
             objectFit="contain"
             style={{ filter: 'var(--image-filter)' }}
           />
-        </div>}
+        </div>
         <div className="full-name font-bold text-2xl">{translate("fullname")}</div>
         <div className="role text-xl mb-5">{translate("role")}</div>
         <div className="personal-info text-xl mb-6">
           <PersonalInfoItem label={translate("birthDate")} value={translate("birthDateValue")} />
           <PersonalInfoItem label={translate("location")} value={translate("tehran")} />
-          {lang === 'fa' && <PersonalInfoItem label={translate("militaryService")} value={translate("finished")} />}
           <PersonalInfoItem label={translate("email")} value={translate("arminyahyaa@gmail.com")} />
         </div>
         <HeaderTypography text={translate("about_me")} />
