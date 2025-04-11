@@ -2,10 +2,11 @@ export type dictionary = {[key: string]: string};
 
 const EN_Dictionary: dictionary = {
 	fullname: 'Armin Yahya',
-	role: 'Frontend Developer',
+	role: 'Senior Frontend Developer',
 	about_me: 'About me',
-	about_me_content: `Frontend developer with a strong foundation in building responsive and user-friendly web applications. Passionate about writing clean, efficient code and continuously learning modern technologies. Dedicated to delivering high-quality results and collaborating with experienced teams to create seamless digital experiences.`,
-	skills: 'Skills',
+	about_me_content: `Senior Frontend Engineer with 7 years of experience in React and TypeScript, specializing in large-scale and enterprise web applications.
+I love learning and sharing knowledge. Working as part of a team, collaborating with other frontend engineers and contributing to decisions is what excites me. I also enjoy building tools and automating processes to make development faster and smoother.`,
+			skills: 'Skills',
 	past_experiences: 'Past experience',
 	chargoon: 'Chargoon',
 	'2020April': '2020 April',
@@ -44,16 +45,20 @@ const EN_Dictionary: dictionary = {
     gallery_yeganeh_edms_documentgroup: `This is the data entry form for one of the entities in the document software.`,
 	now: 'Now',
 	'2024December': '2024 December',
-	flytodayCompanyTask1: "Contributing to a Next.js project that has a large and expanding user base.",
-	flytodayCompanyTask2: "Developing a smart and dynamic Tour component to fit within the company's codebase",
-	flytodayCompanyTask3: "Maintaining components to ensure compatibility across various devices",
-	flytodayCompanyTask4: "Optimizing components and imported modules to enhance site performance and reduce load time",
+	flytodayCompanyTask1: "Contributed to the development and optimization of a Next.js project, ensuring high scalability and maintainability.",
+	flytodayCompanyTask2: "Designed and implemented a responsive, accessible, and SEO-friendly UI for online travel card orders",
+	flytodayCompanyTask3: "Enhanced application performance by reducing bundle size, optimizing rendering, and implementing lazy loading",
+	flytodayCompanyTask4: "Collaborated with backend developers to integrate RESTful APIs and enhance data fetching efficiency",
 	gallery_flytoday_tour: "This is the Tour component I developed. It can adjust its position from the bottom to other areas if there is no available space below. Additionally, you can apply different styles to each step.",
-	chargoonCompanyTask2: "Created and maintained technical documentation for projects in the knowledge base to support team members and company engineers, improving collaboration and knowledge sharing.",
-	chargoonCompanyTask4: "Assisted new Infrastructure team members in familiarizing themselves with the codebase.",
-	yeganehCompanyTask1: "Gained hands-on experience with the Ant Design framework, utilizing its component-based architecture to enhance UI development and improve user experience.",
-	yeganehCompanyTask2: "Worked closely with a UI designer to translate design concepts into responsive, user-friendly web interfaces, ensuring seamless frontend development and a cohesive user experience.",
-	yeganehCompanyTask3: "Contributed to the development of a web-based Document Manager and an Electronic Document Management System (EDMS), focusing on creating intuitive user interfaces and enhancing functionality."
+	chargoonCompanyTask1: "Contributed technical articles to a knowledge base system, supporting collaboration among engineers",
+	chargoonCompanyTask2: `Created a dynamic diagram environment using GoJS for visualizing database schemas.`,
+	chargoonCompanyTask3: `Built an efficient form generator to streamline UI development for non-complex applications.`,
+	chargoonCompanyTask4: "Optimized performance of complex components like tree structures to handle large datasets efficiently.",
+	chargoonCompanyTask5: `Worked on the migration of frontend projects to the latest versions of React, TypeScript, and Webpack, ensuring compatibility and performance improvements.`,
+	yeganehCompanyTask1: "Developed web-based document management systems (EDMS) with a focus on intuitive UI/UX",
+	yeganehCompanyTask2: "Used Ant Design framework to create well-structured, reusable UI components.",
+	yeganehCompanyTask3: "Collaborated closely with UI/UX designers to transform design concepts into enterprise-level web applications.",
+	education_content: "Bachelor’s Degree – Islamic Azad University-South Tehran Branch"
 };
 
 export default EN_Dictionary;
