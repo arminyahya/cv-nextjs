@@ -36,9 +36,6 @@ export default function Header({ }: HeaderProps) {
 			<div className="inline-block mx-2 cursor-pointer" onClick={switchTheme}>
 				{currentTheme === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
 			</div>
-			<div className="inline-block mx-1 cursor-pointer" onClick={switchLang} >
-				<MultiLangIcon />
-			</div>
 		</header>
 	)
 }

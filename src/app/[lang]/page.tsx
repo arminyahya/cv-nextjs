@@ -40,18 +40,17 @@ export default function Page({ params }: PageInnerProps) {
 
   const { translate } = useTranslation(params.lang);
   return (
-    <main className={`flex flex-col print:flex-row sm:flex-row`}>
-      <section className={"flex-1 mb-5"}>
+    <main className={`flex flex-col print:flex-row sm:flex-row print:gap-6`}>
+      <section className={"flex-0 flex-b mb-5"}>
         <div
-          className="mb-5 relative w-full h-56 print:w-52 print:mw-52 md:w-56 print:hidden"
+          className="mb-5 relative w-full h-56 print:w-52 md:w-56 print:hidden"
         >
           <Image
             alt="armin-yahya"
-            src={`${basePath}/profile-image-3.jpg`}
+            src={`${basePath}/profile-image-4.jpg`}
             fill
-            objectPosition="50% 50%"
-            objectFit="contain"
             style={{ filter: 'var(--image-filter)' }}
+            className="object-contain md:object-cover"
           />
         </div>
         <div className="full-name font-bold text-2xl">{translate("fullname")}</div>
@@ -60,6 +59,8 @@ export default function Page({ params }: PageInnerProps) {
           <PersonalInfoItem label={translate("birthDate")} value={translate("birthDateValue")} />
           <PersonalInfoItem label={translate("location")} value={translate("tehran")} />
           <PersonalInfoItem label={translate("email")} value={translate("arminyahyaa@gmail.com")} />
+          <PersonalInfoItem label={translate("Linkedin")} value={translate("linkedin.com/in/arminyahya")} />
+          <PersonalInfoItem label={translate("Github")} value={translate("github.com/arminyahya")} />
         </div>
         <HeaderTypography text={translate("about_me")} />
         <div
@@ -69,28 +70,42 @@ export default function Page({ params }: PageInnerProps) {
           {translate("about_me_content")}
         </div>
         <div className={"mb-4 font-bold"}>{translate("skills")}</div>
-        <div className="text-base text-text-color-lighter grid grid-cols-2 sm:flex-row">
+        <div className="text-base text-text-color-lighter grid grid-cols-2 sm:flex-row mb-5">
           <ul className="m0 p-0">
-            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Javascript</li>
-            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Typescript</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">JavaScript (ES6+)</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">TypeScript</li>
             <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Reactjs</li>
-            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">HTML / CSS</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">HTML5 / CSS3</li>
           </ul>
           <ul className="p-0">
             <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">ReduxToolkit</li>
             <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Next.js</li>
-            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Webpack</li>
-            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Git</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Node.js</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Vite</li>
           </ul>
           <ul className="p-0">
-            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Tailwind CSS</li>
-            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">NodeJS</li>
-            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Scrum</li>
-            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Software Development</li>
+          <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Git</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">TailwindCSS</li>
+            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Figma </li>
           </ul>
           <ul className="p-0">
-            <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Lerna</li>
+          <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">Code Splitting</li>
+          <li className="animate-fadeIn-fast list-none my-1 mb-1 opacity-0">React Testing Library</li>
           </ul>
+        </div>
+        <div className={"mb-4 font-bold"}>{translate("Education")}</div>
+        <div
+          className="mb-5 animate-fadeIn-slow delay-300 text-base text-text-color-lighter"
+          style={{ maxWidth: 400 }}
+        >
+          {translate("education_content")}
+        </div>
+        <div className={"mb-4 font-bold"}>{translate("Languages")}</div>
+        <div
+          className="mb-5 animate-fadeIn-slow delay-300 text-base text-text-color-lighter"
+          style={{ maxWidth: 400 }}
+        >
+          English (Fluent), Persian (Native)
         </div>
       </section>
       <section className={"flex-1 mb-5 print:flex-grow-[2]"}>
@@ -106,11 +121,13 @@ export default function Page({ params }: PageInnerProps) {
               translate("flytodayCompanyTask1"),
               translate("flytodayCompanyTask2"),
               translate("flytodayCompanyTask3"),
-              translate("flytodayCompanyTask4"),]}
+              translate("flytodayCompanyTask4"),
+            `Actively participated in code reviews, providing constructive feedback and ensuring code quality, maintainability, and adherence to best practices`,
+          ]}
             items={[
               { type: 'image', src: "/flytoday-1.png", description: translate("gallery_flytoday_tour") },
             ]}
-            className={"mb-5-2x"}
+            className={"mb-10"}
             noDescription={true}
           />
           <PastExperienceItem
@@ -121,16 +138,18 @@ export default function Page({ params }: PageInnerProps) {
             endDate={translate("2024September")}
             role={translate("role")}
             companyTasks={[
-              translate("As an infrastructure team member, I participate in migrating to Redux Toolkit from MobX"),
+          `Had the opportunity to work and communicate with a team of 70+ developers, fostering collaboration across multiple projects and teams`,  
+             
+              translate("chargoonCompanyTask1"),
               translate("chargoonCompanyTask2"),
-              translate("Designed a diagram environment using the GoJS library to create database schemas"),
+              translate("chargoonCompanyTask3"),
               translate("chargoonCompanyTask4"),
-              translate("Created a simple form generator for software that doesn’t need a complex form designer"),
-              translate("As a member of the infrastructure team, I successfully resolved issues that were reported by other teams"),
-              translate("I refactored LESS styles to utilize CSS variables for theming"),
-              translate("I improved the performance of certain components (such as the tree) to handle large amounts of data more efficiently"),
-              translate("I collaborated on migrating to the new major versions of packages such as React, TypeScript, Webpack, and others"),
-
+              translate("chargoonCompanyTask5"),
+              `Redesigned the technical hiring process, making it more developer-friendly and increasing the pass rate while ensuring better candidate quality. The improved test project reduced evaluation time by 50%, streamlining recruitment`,
+              `Led the successful migration from the previous state management solution to Redux Toolkit, improving state handling and application performance`,
+              `Mentored junior developers, encouraging collaboration and enhancing overall team productivity and efficiency`
+             
+              ,
             ]}
             items={[
               { type: 'image', src: "/chargoon-1.png", description: translate("gallery_chargoon_modeler") },
@@ -144,7 +163,7 @@ export default function Page({ params }: PageInnerProps) {
               { type: 'video', src: "/chargoon-9.mp4", description: translate("gallery_chargoon_output_video") },
 
             ]}
-            className={"mb-5-2x"}
+            className={"mb-20"}
           />
           <PastExperienceItem
             id="yeganeh_soft"
@@ -165,7 +184,7 @@ export default function Page({ params }: PageInnerProps) {
               { type: 'image', src: "/yeganeh-5.jpg", description: translate("gallery_yeganeh_edms_orgchart") },
               { type: 'image', src: "/yeganeh-6.jpg", description: translate("gallery_yeganeh_edms_documentgroup") },
             ]}
-            className={"mb-5-2x"}
+            className={"mb-10"}
             noDescription={true}
           />
         </div>
