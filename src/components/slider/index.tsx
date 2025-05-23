@@ -21,7 +21,7 @@ interface ResponsiveSliderProps {
 }
 
 export default function Slider({ items, onClose, noDescription = false }: ResponsiveSliderProps) {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isZooming, setIsZooming] = useState(false)
   const { lang } = useParams();
   const { translate } = useTranslation(lang as "fa" | 'en');
@@ -39,7 +39,6 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
 
   const currentItem = items[currentIndex]
   const displayNavigationButtons = items.length > 1;
-  const displayNextButton = !!items[currentIndex + 1];
 
   return (
     <div className="responsive-slider">
@@ -109,7 +108,7 @@ export default function Slider({ items, onClose, noDescription = false }: Respon
           </div>
           {displayNavigationButtons && <div className="navigation-buttons">
             <button onClick={prevItem} className="nav-button">{translate('previous')}</button>
-            {displayNextButton && <button onClick={nextItem} className="nav-button">{translate('next')}</button>}
+            <button onClick={nextItem} className="nav-button">{translate('next')}</button>
           </div>}
         </div>
       </div>
