@@ -1,4 +1,3 @@
-import "./page.css";
 import { Metadata , Viewport} from "next";
 import Page from './[lang]/page';
 
@@ -17,5 +16,5 @@ export const viewport: Viewport = {
 }
 
 export default function Home() {
-	return <Page params={{lang: 'fa'}}  />
+	return <Page   />
 }
