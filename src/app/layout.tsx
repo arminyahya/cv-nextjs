@@ -8,7 +8,6 @@ import Footer from "@/components/footer";
 import { useParams } from "next/navigation";
 
 const openSans = localFont({ src: "../../public/OpenSans.ttf" });
-const iranYekan = localFont({ src: "../../public/Iranyekan light.ttf" });
 
 export default function RootLayout({
   children,
@@ -17,10 +16,10 @@ export default function RootLayout({
 }>) {
   const { lang } = useParams();
   return (
-    <html dir={lang === "en" ? "ltr" : "rtl"} lang={lang as "en" | "fa"}>
+    <html  >
       <body
         className={
-          (lang === "en" ? openSans.className : iranYekan.className) + ' relative my-0 mx-auto w-full bg-background-color max-w-[1000px]'
+          ( openSans.className) + ' relative my-0 mx-auto w-full bg-background-color max-w-[1000px]'
         }
       >
         <Header />
